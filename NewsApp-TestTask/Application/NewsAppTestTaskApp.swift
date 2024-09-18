@@ -1,5 +1,5 @@
 //
-//  NewsApp_TestTaskApp.swift
+//  NewsAppTestTaskApp.swift
 //  NewsApp-TestTask
 //
 //  Created by Сергей Дашко on 18.09.2024.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct NewsApp_TestTaskApp: App {
+struct NewsAppTestTaskApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
