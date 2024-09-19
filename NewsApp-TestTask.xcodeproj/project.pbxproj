@@ -37,6 +37,17 @@
 		855703952C9C94190086590C /* Inter-VariableFont_opsz,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 855703942C9C94190086590C /* Inter-VariableFont_opsz,wght.ttf */; };
 		855703972C9C942A0086590C /* SchibstedGrotesk-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 855703962C9C94290086590C /* SchibstedGrotesk-VariableFont_wght.ttf */; };
 		8557039B2C9C95BD0086590C /* LibreFranklin-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8557039A2C9C95BD0086590C /* LibreFranklin-VariableFont_wght.ttf */; };
+		855703A02C9C991B0086590C /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557039F2C9C991B0086590C /* NewsViewModel.swift */; };
+		855703A22C9C99240086590C /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703A12C9C99240086590C /* NewsView.swift */; };
+		855703A42C9C99350086590C /* NewsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703A32C9C99350086590C /* NewsCoordinator.swift */; };
+		855703A62C9C993F0086590C /* NewsCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703A52C9C993F0086590C /* NewsCoordinatorView.swift */; };
+		855703A92C9C99F60086590C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703A82C9C99F60086590C /* ProfileViewModel.swift */; };
+		855703AB2C9C99FE0086590C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703AA2C9C99FE0086590C /* ProfileView.swift */; };
+		855703AF2C9C9D1C0086590C /* MainCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703AE2C9C9D1C0086590C /* MainCoordinatorView.swift */; };
+		855703B22C9C9D300086590C /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703B12C9C9D300086590C /* MainCoordinator.swift */; };
+		855703B52C9C9D540086590C /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703B42C9C9D540086590C /* ProfileCoordinator.swift */; };
+		855703B72C9C9D5F0086590C /* ProfileCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703B62C9C9D5F0086590C /* ProfileCoordinatorView.swift */; };
+		855703BB2C9CAA9A0086590C /* TabbedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703BA2C9CAA990086590C /* TabbedItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +82,17 @@
 		855703942C9C94190086590C /* Inter-VariableFont_opsz,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_opsz,wght.ttf"; sourceTree = "<group>"; };
 		855703962C9C94290086590C /* SchibstedGrotesk-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SchibstedGrotesk-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		8557039A2C9C95BD0086590C /* LibreFranklin-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		8557039F2C9C991B0086590C /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		855703A12C9C99240086590C /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		855703A32C9C99350086590C /* NewsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCoordinator.swift; sourceTree = "<group>"; };
+		855703A52C9C993F0086590C /* NewsCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCoordinatorView.swift; sourceTree = "<group>"; };
+		855703A82C9C99F60086590C /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		855703AA2C9C99FE0086590C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		855703AE2C9C9D1C0086590C /* MainCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorView.swift; sourceTree = "<group>"; };
+		855703B12C9C9D300086590C /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		855703B42C9C9D540086590C /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		855703B62C9C9D5F0086590C /* ProfileCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinatorView.swift; sourceTree = "<group>"; };
+		855703BA2C9CAA990086590C /* TabbedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +216,7 @@
 				855703472C9C15E60086590C /* Launch */,
 				8557035D2C9C1F570086590C /* Onboarding */,
 				855703712C9C7A2D0086590C /* Paywall */,
+				8557039C2C9C987C0086590C /* Main */,
 				855703422C9C14B80086590C /* AppCoordinator */,
 			);
 			path = Modules;
@@ -296,6 +319,7 @@
 			children = (
 				8557036F2C9C763E0086590C /* RoundedCorner.swift */,
 				8557037E2C9C7EB60086590C /* UIColor.swift */,
+				855703BA2C9CAA990086590C /* TabbedItems.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -335,6 +359,63 @@
 				855703962C9C94290086590C /* SchibstedGrotesk-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8557039C2C9C987C0086590C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8557039E2C9C99080086590C /* News */,
+				855703A72C9C99830086590C /* Profile */,
+				8557039D2C9C98FF0086590C /* Coordinator */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8557039D2C9C98FF0086590C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				855703B12C9C9D300086590C /* MainCoordinator.swift */,
+				855703AE2C9C9D1C0086590C /* MainCoordinatorView.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8557039E2C9C99080086590C /* News */ = {
+			isa = PBXGroup;
+			children = (
+				855703A12C9C99240086590C /* NewsView.swift */,
+				8557039F2C9C991B0086590C /* NewsViewModel.swift */,
+				855703AC2C9C9AEF0086590C /* Coordinator */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		855703A72C9C99830086590C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				855703AA2C9C99FE0086590C /* ProfileView.swift */,
+				855703A82C9C99F60086590C /* ProfileViewModel.swift */,
+				855703B32C9C9D480086590C /* Coordinator */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		855703AC2C9C9AEF0086590C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				855703A32C9C99350086590C /* NewsCoordinator.swift */,
+				855703A52C9C993F0086590C /* NewsCoordinatorView.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		855703B32C9C9D480086590C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				855703B42C9C9D540086590C /* ProfileCoordinator.swift */,
+				855703B62C9C9D5F0086590C /* ProfileCoordinatorView.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,10 +492,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8557034D2C9C16260086590C /* LaunchCoordinatorView.swift in Sources */,
+				855703A42C9C99350086590C /* NewsCoordinator.swift in Sources */,
 				855703792C9C7A9A0086590C /* PaywallCoordinator.swift in Sources */,
 				855703532C9C17A80086590C /* LaunchView.swift in Sources */,
+				855703B52C9C9D540086590C /* ProfileCoordinator.swift in Sources */,
+				855703A62C9C993F0086590C /* NewsCoordinatorView.swift in Sources */,
 				855703232C9AA99F0086590C /* NewsAppTestTaskApp.swift in Sources */,
 				855703602C9C1F710086590C /* OnboardingCoordinator.swift in Sources */,
+				855703A02C9C991B0086590C /* NewsViewModel.swift in Sources */,
 				8557037D2C9C7E8D0086590C /* Color.swift in Sources */,
 				8557033F2C9C13D60086590C /* ModuleFactory.swift in Sources */,
 				8557034B2C9C161B0086590C /* LaunchCoordinator.swift in Sources */,
@@ -423,18 +508,25 @@
 				855703772C9C7A860086590C /* PaywallViewModel.swift in Sources */,
 				855703572C9C19D00086590C /* Font.swift in Sources */,
 				855703672C9C20350086590C /* OnboardingViewModel.swift in Sources */,
+				855703B22C9C9D300086590C /* MainCoordinator.swift in Sources */,
 				8557033D2C9C131B0086590C /* CoordinatorFactoryProtocols.swift in Sources */,
 				855703622C9C1F760086590C /* OnboardingCoordinatorView.swift in Sources */,
+				855703AB2C9C99FE0086590C /* ProfileView.swift in Sources */,
 				855703462C9C14DF0086590C /* AppCoordinatorView.swift in Sources */,
 				8557034F2C9C16820086590C /* Coordinator.swift in Sources */,
 				8557036D2C9C76030086590C /* View.swift in Sources */,
+				855703A22C9C99240086590C /* NewsView.swift in Sources */,
 				855703652C9C202D0086590C /* OnboardingView.swift in Sources */,
+				855703AF2C9C9D1C0086590C /* MainCoordinatorView.swift in Sources */,
 				8557037F2C9C7EB60086590C /* UIColor.swift in Sources */,
+				855703A92C9C99F60086590C /* ProfileViewModel.swift in Sources */,
 				855703512C9C16980086590C /* Routable.swift in Sources */,
+				855703B72C9C9D5F0086590C /* ProfileCoordinatorView.swift in Sources */,
 				855703752C9C7A700086590C /* PaywallView.swift in Sources */,
 				855703702C9C763E0086590C /* RoundedCorner.swift in Sources */,
 				855703552C9C17B20086590C /* LaunchViewModel.swift in Sources */,
 				8557037B2C9C7AA20086590C /* PaywallCoordinatorView.swift in Sources */,
+				855703BB2C9CAA9A0086590C /* TabbedItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,3 +21,14 @@ protocol OnboardingViewFactory {
 protocol PaywallViewFactory {
     func makePaywallView(coordinator: PaywallCoordinator) -> PaywallView
 }
+
+@MainActor
+protocol NewsViewFactory {
+    func makeNewsView(coordinator: NewsCoordinator) -> NewsView
+}
+
+@MainActor
+protocol ProfileViewFactory {
+    func makeProfileView(coordinator: ProfileCoordinator) -> ProfileView
+}
+

@@ -1,5 +1,5 @@
 //
-//  PaywallCoordinatorView.swift
+//  ProfileCoordinatorView.swift
 //  NewsApp-TestTask
 //
 //  Created by Сергей Дашко on 19.09.2024.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct PaywallCoordinatorView: View {
+struct ProfileCoordinatorView: View {
 
     private let moduleFactory: CoordinatorFactory
 
-    @StateObject private var coordinator: PaywallCoordinator
+    @StateObject private var coordinator: ProfileCoordinator
 
-    init(moduleFactory: CoordinatorFactory, coordinator: PaywallCoordinator) {
+    init(moduleFactory: CoordinatorFactory, coordinator: ProfileCoordinator) {
         self.moduleFactory = moduleFactory
         self._coordinator = StateObject(wrappedValue: coordinator)
     }
@@ -21,8 +21,8 @@ struct PaywallCoordinatorView: View {
     var body: some View {
         NavigationStack(
             path: self.$coordinator.navigationPath) {
-                self.destination(.paywall)
-                    .navigationDestination(for: PaywallCoordinator.Screen.self) {
+                self.destination(.profile)
+                    .navigationDestination(for: ProfileCoordinator.Screen.self) {
                         self.destination($0)
                             .navigationBarBackButtonHidden()
                     }
@@ -30,10 +30,10 @@ struct PaywallCoordinatorView: View {
     }
 
     @ViewBuilder
-    private func destination(_ screen: PaywallCoordinator.Screen) -> some View {
+    private func destination(_ screen: ProfileCoordinator.Screen) -> some View {
         switch screen {
-        case .paywall:
-            self.moduleFactory.makePaywallView(coordinator: self.coordinator)
+        case .profile:
+            self.moduleFactory.makeProfileView(coordinator: self.coordinator)
         }
     }
 }

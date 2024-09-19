@@ -52,16 +52,49 @@ extension ModuleFactory: OnboardingViewFactory {
 // MARK: PaywallViewFactory
 
 extension ModuleFactory: PaywallViewFactory {
+    func makePaywallView(coordinator: PaywallCoordinator) -> PaywallView {
 
-    func makePaywallView(coordinator:  PaywallCoordinator) -> PaywallView {
-
-        let router = PaywallViewModel.Router.init {}
+        let router = PaywallViewModel.Router.init {
+            coordinator.goToNextScreen?()
+        }
 
         let viewModel = PaywallViewModel(
             router: router
         )
 
         return PaywallView(viewModel: viewModel)
+    }
+}
+
+// MARK: NewsViewFactory
+
+extension ModuleFactory: NewsViewFactory {
+
+    func makeNewsView(coordinator:  NewsCoordinator) -> NewsView {
+
+        let router = NewsViewModel.Router.init {}
+
+        let viewModel = NewsViewModel(
+            router: router
+        )
+
+        return NewsView(viewModel: viewModel)
+    }
+}
+
+// MARK: ProfileViewFactory
+
+extension ModuleFactory: ProfileViewFactory {
+
+    func makeProfileView(coordinator:  ProfileCoordinator) -> ProfileView {
+
+        let router = ProfileViewModel.Router.init {}
+
+        let viewModel = ProfileViewModel(
+            router: router
+        )
+
+        return ProfileView(viewModel: viewModel)
     }
 }
 

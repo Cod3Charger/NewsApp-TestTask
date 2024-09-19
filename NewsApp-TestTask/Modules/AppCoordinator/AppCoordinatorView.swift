@@ -46,7 +46,14 @@ struct AppCoordinatorView: View {
         case .paywall:
             PaywallCoordinatorView(
                 moduleFactory: self.moduleFactory,
-                coordinator: PaywallCoordinator()
+                coordinator: PaywallCoordinator(goToNextScreen: {
+                    self.coordinator.change(flow: .main)
+                })
+            )
+        case .main:
+            MainCoordinatorView(
+                moduleFactory: self.moduleFactory,
+                coordinator: MainCoordinator()
             )
         }
     }

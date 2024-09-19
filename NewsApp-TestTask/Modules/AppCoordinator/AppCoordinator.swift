@@ -13,6 +13,7 @@ final class AppCoordinator: ObservableObject {
         case launch
         case onboarding
         case paywall
+        case main
     }
 
     @Published var flow: Flow = .launch
