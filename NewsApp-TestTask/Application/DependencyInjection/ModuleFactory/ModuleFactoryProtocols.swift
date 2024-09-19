@@ -11,3 +11,9 @@ import Foundation
 protocol LaunchViewFactory {
     func makeLaunchView(coordinator: LaunchCoordinator) -> LaunchView
 }
+
+@MainActor
+protocol OnboardingViewFactory {
+    func makeOnboardingView(coordinator: OnboardingCoordinator) -> OnboardingView
+}
+

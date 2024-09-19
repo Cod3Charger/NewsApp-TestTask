@@ -18,6 +18,9 @@ struct LaunchView: View {
     var body: some View {
         Text("NewsApp")
             .font(Font.systemBold60)
+            .onAppear {
+                viewModel.startTimer()
+            }
     }
 }
 

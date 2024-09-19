@@ -1,5 +1,5 @@
 //
-//  LaunchCoordinatorView.swift
+//  OnboardingCoordinatorView.swift
 //  NewsApp-TestTask
 //
 //  Created by Сергей Дашко on 19.09.2024.
@@ -7,33 +7,34 @@
 
 import SwiftUI
 
-struct LaunchCoordinatorView: View {
-    
+struct OnboardingCoordinatorView: View {
+
     private let moduleFactory: CoordinatorFactory
-    
-    @StateObject private var coordinator: LaunchCoordinator
-    
-    init(moduleFactory: CoordinatorFactory, coordinator: LaunchCoordinator) {
+
+    @StateObject private var coordinator: OnboardingCoordinator
+
+    init(moduleFactory: CoordinatorFactory, coordinator: OnboardingCoordinator) {
         self.moduleFactory = moduleFactory
         self._coordinator = StateObject(wrappedValue: coordinator)
     }
-    
+
     var body: some View {
         NavigationStack(
             path: self.$coordinator.navigationPath) {
-                self.destination(.launch)
-                    .navigationDestination(for: LaunchCoordinator.Screen.self) {
+                self.destination(.onboarding)
+                    .navigationDestination(for: OnboardingCoordinator.Screen.self) {
                         self.destination($0)
                             .navigationBarBackButtonHidden()
                     }
             }
     }
-    
+
     @ViewBuilder
-    private func destination(_ screen: LaunchCoordinator.Screen) -> some View {
+    private func destination(_ screen: OnboardingCoordinator.Screen) -> some View {
         switch screen {
-        case .launch:
-            self.moduleFactory.makeLaunchView(coordinator: self.coordinator)
+        case .onboarding:
+            self.moduleFactory.makeOnboardingView(coordinator: self.coordinator)
         }
     }
 }
+

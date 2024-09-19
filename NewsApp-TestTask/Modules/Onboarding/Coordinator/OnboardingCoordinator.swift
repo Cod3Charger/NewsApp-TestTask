@@ -1,5 +1,5 @@
 //
-//  LaunchCoordinator.swift
+//  OnboardingCoordinator.swift
 //  NewsApp-TestTask
 //
 //  Created by Сергей Дашко on 19.09.2024.
@@ -7,23 +7,17 @@
 
 import Foundation
 
-final class LaunchCoordinator: Coordinator {
+final class OnboardingCoordinator: Coordinator {
 
     enum Screen: Routable {
-        case launch
+        case onboarding
     }
 
     @Published var navigationPath: [Screen] = []
 
-    var goToNextScreen: (() -> Void)?
-
-    init(goToNextScreen: (() -> Void)? = nil) {
-        self.goToNextScreen = goToNextScreen
-    }
-
     func popToRoot() {
         navigationPath.removeAll()
-        navigationPath.append(.launch)
+        navigationPath.append(.onboarding)
     }
 
     func pop() {

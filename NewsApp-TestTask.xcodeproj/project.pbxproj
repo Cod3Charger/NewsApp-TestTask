@@ -22,6 +22,10 @@
 		855703532C9C17A80086590C /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703522C9C17A80086590C /* LaunchView.swift */; };
 		855703552C9C17B20086590C /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703542C9C17B20086590C /* LaunchViewModel.swift */; };
 		855703572C9C19D00086590C /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703562C9C19D00086590C /* Font.swift */; };
+		855703602C9C1F710086590C /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557035F2C9C1F710086590C /* OnboardingCoordinator.swift */; };
+		855703622C9C1F760086590C /* OnboardingCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703612C9C1F760086590C /* OnboardingCoordinatorView.swift */; };
+		855703652C9C202D0086590C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703642C9C202D0086590C /* OnboardingView.swift */; };
+		855703672C9C20350086590C /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703662C9C20350086590C /* OnboardingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		855703522C9C17A80086590C /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		855703542C9C17B20086590C /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		855703562C9C19D00086590C /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		8557035F2C9C1F710086590C /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		855703612C9C1F760086590C /* OnboardingCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorView.swift; sourceTree = "<group>"; };
+		855703642C9C202D0086590C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		855703662C9C20350086590C /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				855703472C9C15E60086590C /* Launch */,
+				8557035D2C9C1F570086590C /* Onboarding */,
 				855703422C9C14B80086590C /* AppCoordinator */,
 			);
 			path = Modules;
@@ -185,9 +194,9 @@
 		8557033B2C9C12F40086590C /* ModuleFactory */ = {
 			isa = PBXGroup;
 			children = (
+				855703402C9C146D0086590C /* ModuleFactoryProtocols.swift */,
 				8557033C2C9C131B0086590C /* CoordinatorFactoryProtocols.swift */,
 				8557033E2C9C13D60086590C /* ModuleFactory.swift */,
-				855703402C9C146D0086590C /* ModuleFactoryProtocols.swift */,
 			);
 			path = ModuleFactory;
 			sourceTree = "<group>";
@@ -226,6 +235,33 @@
 				8557034C2C9C16260086590C /* LaunchCoordinatorView.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8557035D2C9C1F570086590C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				855703632C9C20190086590C /* Onboarding */,
+				8557035E2C9C1F630086590C /* Coordinator */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8557035E2C9C1F630086590C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8557035F2C9C1F710086590C /* OnboardingCoordinator.swift */,
+				855703612C9C1F760086590C /* OnboardingCoordinatorView.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		855703632C9C20190086590C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				855703642C9C202D0086590C /* OnboardingView.swift */,
+				855703662C9C20350086590C /* OnboardingViewModel.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,14 +337,18 @@
 				8557034D2C9C16260086590C /* LaunchCoordinatorView.swift in Sources */,
 				855703532C9C17A80086590C /* LaunchView.swift in Sources */,
 				855703232C9AA99F0086590C /* NewsAppTestTaskApp.swift in Sources */,
+				855703602C9C1F710086590C /* OnboardingCoordinator.swift in Sources */,
 				8557033F2C9C13D60086590C /* ModuleFactory.swift in Sources */,
 				8557034B2C9C161B0086590C /* LaunchCoordinator.swift in Sources */,
 				855703442C9C14D50086590C /* AppCoordinator.swift in Sources */,
 				855703412C9C146D0086590C /* ModuleFactoryProtocols.swift in Sources */,
 				855703572C9C19D00086590C /* Font.swift in Sources */,
+				855703672C9C20350086590C /* OnboardingViewModel.swift in Sources */,
 				8557033D2C9C131B0086590C /* CoordinatorFactoryProtocols.swift in Sources */,
+				855703622C9C1F760086590C /* OnboardingCoordinatorView.swift in Sources */,
 				855703462C9C14DF0086590C /* AppCoordinatorView.swift in Sources */,
 				8557034F2C9C16820086590C /* Coordinator.swift in Sources */,
+				855703652C9C202D0086590C /* OnboardingView.swift in Sources */,
 				855703512C9C16980086590C /* Routable.swift in Sources */,
 				855703552C9C17B20086590C /* LaunchViewModel.swift in Sources */,
 			);

@@ -16,8 +16,28 @@ final class LaunchViewModel: ObservableObject {
     }
 }
 
+// MARK: - Methods
+
+extension LaunchViewModel {
+    func startTimer() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.navigateToNextScreen()
+        }
+    }
+}
+
+// MARK: - Private Methods
+
+extension LaunchViewModel {
+    private func navigateToNextScreen() {
+        router.navigateToNextScreen()
+    }
+}
+
 // MARK: - Router
 
 extension LaunchViewModel {
-    struct Router {}
+    struct Router {
+        let navigateToNextScreen: () -> Void
+    }
 }

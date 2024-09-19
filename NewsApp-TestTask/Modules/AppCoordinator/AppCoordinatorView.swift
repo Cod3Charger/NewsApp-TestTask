@@ -31,9 +31,16 @@ struct AppCoordinatorView: View {
         case .launch:
             LaunchCoordinatorView(
                 moduleFactory: self.moduleFactory,
-                coordinator: LaunchCoordinator()
+                coordinator: LaunchCoordinator(goToNextScreen: {
+                    self.coordinator.change(flow: .onboarding)
+                })
             )
-                .transition(.opacity)
+            .transition(.opacity)
+        case .onboarding:
+            OnboardingCoordinatorView(
+                moduleFactory: self.moduleFactory,
+                coordinator: OnboardingCoordinator()
+            )
         }
     }
 }
