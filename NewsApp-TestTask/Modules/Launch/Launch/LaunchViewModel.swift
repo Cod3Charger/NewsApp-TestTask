@@ -20,7 +20,8 @@ final class LaunchViewModel: ObservableObject {
 
 extension LaunchViewModel {
     func startTimer() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        // TODO: add time
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
             self.navigateToNextScreen()
         }
     }

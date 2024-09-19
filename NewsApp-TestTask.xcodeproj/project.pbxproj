@@ -26,6 +26,8 @@
 		855703622C9C1F760086590C /* OnboardingCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703612C9C1F760086590C /* OnboardingCoordinatorView.swift */; };
 		855703652C9C202D0086590C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703642C9C202D0086590C /* OnboardingView.swift */; };
 		855703672C9C20350086590C /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703662C9C20350086590C /* OnboardingViewModel.swift */; };
+		8557036D2C9C76030086590C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557036C2C9C76030086590C /* View.swift */; };
+		855703702C9C763E0086590C /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557036F2C9C763E0086590C /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		855703612C9C1F760086590C /* OnboardingCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinatorView.swift; sourceTree = "<group>"; };
 		855703642C9C202D0086590C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		855703662C9C20350086590C /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		8557036C2C9C76030086590C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		8557036F2C9C763E0086590C /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 			children = (
 				855703362C9AAAC00086590C /* UI */,
 				855703372C9AAAC40086590C /* Protocols */,
+				8557036E2C9C76230086590C /* Helpers */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				855703562C9C19D00086590C /* Font.swift */,
+				8557036C2C9C76030086590C /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,6 +268,14 @@
 				855703662C9C20350086590C /* OnboardingViewModel.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8557036E2C9C76230086590C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8557036F2C9C763E0086590C /* RoundedCorner.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,8 +362,10 @@
 				855703622C9C1F760086590C /* OnboardingCoordinatorView.swift in Sources */,
 				855703462C9C14DF0086590C /* AppCoordinatorView.swift in Sources */,
 				8557034F2C9C16820086590C /* Coordinator.swift in Sources */,
+				8557036D2C9C76030086590C /* View.swift in Sources */,
 				855703652C9C202D0086590C /* OnboardingView.swift in Sources */,
 				855703512C9C16980086590C /* Routable.swift in Sources */,
+				855703702C9C763E0086590C /* RoundedCorner.swift in Sources */,
 				855703552C9C17B20086590C /* LaunchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

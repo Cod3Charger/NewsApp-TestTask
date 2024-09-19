@@ -19,5 +19,7 @@ final class OnboardingViewModel: ObservableObject {
 // MARK: - Router
 
 extension OnboardingViewModel {
-    struct Router {}
+    struct Router {
+        let navigateToNextScreen: () -> Void
+    }
 }

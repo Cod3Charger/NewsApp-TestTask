@@ -19,11 +19,9 @@ extension ModuleFactory: LaunchViewFactory {
 
     func makeLaunchView(coordinator: LaunchCoordinator) -> LaunchView {
 
-        let router = LaunchViewModel.Router.init(
-            navigateToNextScreen: {
-                coordinator.goToNextScreen?()
-            }
-        )
+        let router = LaunchViewModel.Router.init {
+            coordinator.goToNextScreen?()
+        }
 
         let viewModel = LaunchViewModel(
             router: router
@@ -39,7 +37,9 @@ extension ModuleFactory: OnboardingViewFactory {
 
     func makeOnboardingView(coordinator: OnboardingCoordinator) -> OnboardingView {
 
-        let router = OnboardingViewModel.Router.init()
+        let router = OnboardingViewModel.Router.init {
+            coordinator.goToNextScreen?()
+        }
 
         let viewModel = OnboardingViewModel(
             router: router

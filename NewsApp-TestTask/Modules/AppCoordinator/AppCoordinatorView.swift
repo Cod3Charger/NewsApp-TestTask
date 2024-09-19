@@ -39,8 +39,12 @@ struct AppCoordinatorView: View {
         case .onboarding:
             OnboardingCoordinatorView(
                 moduleFactory: self.moduleFactory,
-                coordinator: OnboardingCoordinator()
+                coordinator: OnboardingCoordinator(goToNextScreen: {
+                    self.coordinator.change(flow: .paywall)
+                })
             )
+        case .paywall:
+            EmptyView()
         }
     }
 }

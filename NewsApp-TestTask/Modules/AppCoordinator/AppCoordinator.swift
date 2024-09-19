@@ -12,6 +12,7 @@ final class AppCoordinator: ObservableObject {
     enum Flow {
         case launch
         case onboarding
+        case paywall
     }
 
     @Published var flow: Flow = .launch

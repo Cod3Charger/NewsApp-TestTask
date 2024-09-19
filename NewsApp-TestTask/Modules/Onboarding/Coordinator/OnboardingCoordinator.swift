@@ -15,6 +15,12 @@ final class OnboardingCoordinator: Coordinator {
 
     @Published var navigationPath: [Screen] = []
 
+    var goToNextScreen: (() -> Void)?
+
+    init(goToNextScreen: (() -> Void)? = nil) {
+        self.goToNextScreen = goToNextScreen
+    }
+
     func popToRoot() {
         navigationPath.removeAll()
         navigationPath.append(.onboarding)
