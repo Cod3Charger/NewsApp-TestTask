@@ -16,6 +16,16 @@ struct NewsAppTestTaskApp: App {
 
     private let appCoordinator = AppCoordinator()
 
+    // TODO: remove later
+    init () {
+        for family in  UIFont .familyNames {
+            print ( "Family: \(family) " )
+            for name in  UIFont .fontNames(forFamilyName: family) {
+                print ( " - \(name) " )
+            }
+        }
+    }
+
     var body: some Scene {
         WindowGroup {
             AppCoordinatorView(moduleFactory: self.moduleFactory, coordinator: self.appCoordinator)

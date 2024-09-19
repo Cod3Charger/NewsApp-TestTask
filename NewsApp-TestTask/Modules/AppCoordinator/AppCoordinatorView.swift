@@ -44,7 +44,10 @@ struct AppCoordinatorView: View {
                 })
             )
         case .paywall:
-            EmptyView()
+            PaywallCoordinatorView(
+                moduleFactory: self.moduleFactory,
+                coordinator: PaywallCoordinator()
+            )
         }
     }
 }

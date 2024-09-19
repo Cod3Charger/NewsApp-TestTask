@@ -48,3 +48,20 @@ extension ModuleFactory: OnboardingViewFactory {
         return OnboardingView(viewModel: viewModel)
     }
 }
+
+// MARK: PaywallViewFactory
+
+extension ModuleFactory: PaywallViewFactory {
+
+    func makePaywallView(coordinator:  PaywallCoordinator) -> PaywallView {
+
+        let router = PaywallViewModel.Router.init {}
+
+        let viewModel = PaywallViewModel(
+            router: router
+        )
+
+        return PaywallView(viewModel: viewModel)
+    }
+}
+

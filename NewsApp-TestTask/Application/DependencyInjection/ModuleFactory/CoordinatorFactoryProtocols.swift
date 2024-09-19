@@ -7,4 +7,4 @@
 
 import Foundation
 
-protocol CoordinatorFactory: LaunchViewFactory, OnboardingViewFactory {}
+protocol CoordinatorFactory: LaunchViewFactory, OnboardingViewFactory, PaywallViewFactory {}

@@ -38,7 +38,7 @@ struct OnboardingView: View {
             VStack {
                 Spacer()
                 bottomSheet
-                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.45)
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.5)
                     .background(Color.white)
                     .cornerRadius(20, corners: [.topLeft, .topRight])
             }
@@ -53,22 +53,21 @@ private extension OnboardingView {
     @ViewBuilder
     var bottomSheet: some View {
         VStack {
-            Text("Get The Latest News And Updates")
-                .font(Font.systemSemiBold32)
-                .padding(.horizontal, 40)
-                .padding(.top, 40)
-            Text("NewsApp brings you the world’s best journalism, all in one place. Trusted sources, curated by editors, and personalized for you. ")
-                .font(.systemRegular18)
-                .padding(.horizontal, 40)
-                .padding(.top, 8)
-                .foregroundStyle(.secondary)
+            VStack(alignment: .leading) {
+                Text("Get The Latest News And Updates").font(Font.interSemiBold32)
+                    .padding(.horizontal, 40)
+                    .padding(.top, 40)
+                Text("NewsApp brings you the world’s best journalism, all in one place. Trusted sources, curated by editors, and personalized for you. ").font(Font.regularSchibstedGrotesk18)
+                    .padding(.horizontal, 40)
+                    .padding(.top, 8)
+                    .foregroundStyle(.secondary)
+            }
             Spacer()
             
             Button(action: {
                 viewModel.router.navigateToNextScreen()
             }) {
-                Text("Sign in with Google")
-                    .font(.system(size: 18, weight: .bold))
+                Text("Sign in with Google").font(.system(size: 18, weight: .bold))
                     .foregroundColor(.white)
                     .padding()
                     .background(Color.blue)

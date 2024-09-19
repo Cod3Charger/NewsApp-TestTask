@@ -17,3 +17,7 @@ protocol OnboardingViewFactory {
     func makeOnboardingView(coordinator: OnboardingCoordinator) -> OnboardingView
 }
 
+@MainActor
+protocol PaywallViewFactory {
+    func makePaywallView(coordinator: PaywallCoordinator) -> PaywallView
+}

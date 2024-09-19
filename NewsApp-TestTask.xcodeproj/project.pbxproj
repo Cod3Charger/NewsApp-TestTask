@@ -28,6 +28,15 @@
 		855703672C9C20350086590C /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703662C9C20350086590C /* OnboardingViewModel.swift */; };
 		8557036D2C9C76030086590C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557036C2C9C76030086590C /* View.swift */; };
 		855703702C9C763E0086590C /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557036F2C9C763E0086590C /* RoundedCorner.swift */; };
+		855703752C9C7A700086590C /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703742C9C7A700086590C /* PaywallView.swift */; };
+		855703772C9C7A860086590C /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703762C9C7A860086590C /* PaywallViewModel.swift */; };
+		855703792C9C7A9A0086590C /* PaywallCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703782C9C7A9A0086590C /* PaywallCoordinator.swift */; };
+		8557037B2C9C7AA20086590C /* PaywallCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557037A2C9C7AA20086590C /* PaywallCoordinatorView.swift */; };
+		8557037D2C9C7E8D0086590C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557037C2C9C7E8D0086590C /* Color.swift */; };
+		8557037F2C9C7EB60086590C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557037E2C9C7EB60086590C /* UIColor.swift */; };
+		855703952C9C94190086590C /* Inter-VariableFont_opsz,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 855703942C9C94190086590C /* Inter-VariableFont_opsz,wght.ttf */; };
+		855703972C9C942A0086590C /* SchibstedGrotesk-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 855703962C9C94290086590C /* SchibstedGrotesk-VariableFont_wght.ttf */; };
+		8557039B2C9C95BD0086590C /* LibreFranklin-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8557039A2C9C95BD0086590C /* LibreFranklin-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +62,15 @@
 		855703662C9C20350086590C /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		8557036C2C9C76030086590C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8557036F2C9C763E0086590C /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		855703742C9C7A700086590C /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		855703762C9C7A860086590C /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
+		855703782C9C7A9A0086590C /* PaywallCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallCoordinator.swift; sourceTree = "<group>"; };
+		8557037A2C9C7AA20086590C /* PaywallCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallCoordinatorView.swift; sourceTree = "<group>"; };
+		8557037C2C9C7E8D0086590C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8557037E2C9C7EB60086590C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		855703942C9C94190086590C /* Inter-VariableFont_opsz,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_opsz,wght.ttf"; sourceTree = "<group>"; };
+		855703962C9C94290086590C /* SchibstedGrotesk-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SchibstedGrotesk-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		8557039A2C9C95BD0086590C /* LibreFranklin-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +193,7 @@
 			children = (
 				855703472C9C15E60086590C /* Launch */,
 				8557035D2C9C1F570086590C /* Onboarding */,
+				855703712C9C7A2D0086590C /* Paywall */,
 				855703422C9C14B80086590C /* AppCoordinator */,
 			);
 			path = Modules;
@@ -185,6 +204,7 @@
 			children = (
 				855703562C9C19D00086590C /* Font.swift */,
 				8557036C2C9C76030086590C /* View.swift */,
+				8557037C2C9C7E8D0086590C /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,6 +212,7 @@
 		8557033A2C9AAAF00086590C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				855703872C9C8EAE0086590C /* Fonts */,
 				855703262C9AA9A10086590C /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -274,8 +295,46 @@
 			isa = PBXGroup;
 			children = (
 				8557036F2C9C763E0086590C /* RoundedCorner.swift */,
+				8557037E2C9C7EB60086590C /* UIColor.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		855703712C9C7A2D0086590C /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				855703732C9C7A590086590C /* Paywall */,
+				855703722C9C7A510086590C /* Coordinator */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		855703722C9C7A510086590C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				855703782C9C7A9A0086590C /* PaywallCoordinator.swift */,
+				8557037A2C9C7AA20086590C /* PaywallCoordinatorView.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		855703732C9C7A590086590C /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				855703742C9C7A700086590C /* PaywallView.swift */,
+				855703762C9C7A860086590C /* PaywallViewModel.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		855703872C9C8EAE0086590C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				855703942C9C94190086590C /* Inter-VariableFont_opsz,wght.ttf */,
+				8557039A2C9C95BD0086590C /* LibreFranklin-VariableFont_wght.ttf */,
+				855703962C9C94290086590C /* SchibstedGrotesk-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,7 +396,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8557032A2C9AA9A10086590C /* Preview Assets.xcassets in Resources */,
+				855703972C9C942A0086590C /* SchibstedGrotesk-VariableFont_wght.ttf in Resources */,
 				855703272C9AA9A10086590C /* Assets.xcassets in Resources */,
+				8557039B2C9C95BD0086590C /* LibreFranklin-VariableFont_wght.ttf in Resources */,
+				855703952C9C94190086590C /* Inter-VariableFont_opsz,wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,13 +411,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8557034D2C9C16260086590C /* LaunchCoordinatorView.swift in Sources */,
+				855703792C9C7A9A0086590C /* PaywallCoordinator.swift in Sources */,
 				855703532C9C17A80086590C /* LaunchView.swift in Sources */,
 				855703232C9AA99F0086590C /* NewsAppTestTaskApp.swift in Sources */,
 				855703602C9C1F710086590C /* OnboardingCoordinator.swift in Sources */,
+				8557037D2C9C7E8D0086590C /* Color.swift in Sources */,
 				8557033F2C9C13D60086590C /* ModuleFactory.swift in Sources */,
 				8557034B2C9C161B0086590C /* LaunchCoordinator.swift in Sources */,
 				855703442C9C14D50086590C /* AppCoordinator.swift in Sources */,
 				855703412C9C146D0086590C /* ModuleFactoryProtocols.swift in Sources */,
+				855703772C9C7A860086590C /* PaywallViewModel.swift in Sources */,
 				855703572C9C19D00086590C /* Font.swift in Sources */,
 				855703672C9C20350086590C /* OnboardingViewModel.swift in Sources */,
 				8557033D2C9C131B0086590C /* CoordinatorFactoryProtocols.swift in Sources */,
@@ -364,9 +429,12 @@
 				8557034F2C9C16820086590C /* Coordinator.swift in Sources */,
 				8557036D2C9C76030086590C /* View.swift in Sources */,
 				855703652C9C202D0086590C /* OnboardingView.swift in Sources */,
+				8557037F2C9C7EB60086590C /* UIColor.swift in Sources */,
 				855703512C9C16980086590C /* Routable.swift in Sources */,
+				855703752C9C7A700086590C /* PaywallView.swift in Sources */,
 				855703702C9C763E0086590C /* RoundedCorner.swift in Sources */,
 				855703552C9C17B20086590C /* LaunchViewModel.swift in Sources */,
+				8557037B2C9C7AA20086590C /* PaywallCoordinatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
