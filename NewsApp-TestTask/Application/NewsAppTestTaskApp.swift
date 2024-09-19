@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct NewsAppTestTaskApp: App {
+
+    private let moduleFactory: ModuleFactory = {
+        return ModuleFactory()
+    }()
+
+    private let appCoordinator = AppCoordinator()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppCoordinatorView(moduleFactory: self.moduleFactory, coordinator: self.appCoordinator)
         }
     }
 }

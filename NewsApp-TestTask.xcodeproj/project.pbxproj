@@ -10,6 +10,18 @@
 		855703232C9AA99F0086590C /* NewsAppTestTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703222C9AA99F0086590C /* NewsAppTestTaskApp.swift */; };
 		855703272C9AA9A10086590C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855703262C9AA9A10086590C /* Assets.xcassets */; };
 		8557032A2C9AA9A10086590C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855703292C9AA9A10086590C /* Preview Assets.xcassets */; };
+		8557033D2C9C131B0086590C /* CoordinatorFactoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557033C2C9C131B0086590C /* CoordinatorFactoryProtocols.swift */; };
+		8557033F2C9C13D60086590C /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557033E2C9C13D60086590C /* ModuleFactory.swift */; };
+		855703412C9C146D0086590C /* ModuleFactoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703402C9C146D0086590C /* ModuleFactoryProtocols.swift */; };
+		855703442C9C14D50086590C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703432C9C14D50086590C /* AppCoordinator.swift */; };
+		855703462C9C14DF0086590C /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703452C9C14DF0086590C /* AppCoordinatorView.swift */; };
+		8557034B2C9C161B0086590C /* LaunchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557034A2C9C161B0086590C /* LaunchCoordinator.swift */; };
+		8557034D2C9C16260086590C /* LaunchCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557034C2C9C16260086590C /* LaunchCoordinatorView.swift */; };
+		8557034F2C9C16820086590C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8557034E2C9C16820086590C /* Coordinator.swift */; };
+		855703512C9C16980086590C /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703502C9C16980086590C /* Routable.swift */; };
+		855703532C9C17A80086590C /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703522C9C17A80086590C /* LaunchView.swift */; };
+		855703552C9C17B20086590C /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703542C9C17B20086590C /* LaunchViewModel.swift */; };
+		855703572C9C19D00086590C /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855703562C9C19D00086590C /* Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +29,18 @@
 		855703222C9AA99F0086590C /* NewsAppTestTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppTestTaskApp.swift; sourceTree = "<group>"; };
 		855703262C9AA9A10086590C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		855703292C9AA9A10086590C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8557033C2C9C131B0086590C /* CoordinatorFactoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryProtocols.swift; sourceTree = "<group>"; };
+		8557033E2C9C13D60086590C /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		855703402C9C146D0086590C /* ModuleFactoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryProtocols.swift; sourceTree = "<group>"; };
+		855703432C9C14D50086590C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		855703452C9C14DF0086590C /* AppCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorView.swift; sourceTree = "<group>"; };
+		8557034A2C9C161B0086590C /* LaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
+		8557034C2C9C16260086590C /* LaunchCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinatorView.swift; sourceTree = "<group>"; };
+		8557034E2C9C16820086590C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		855703502C9C16980086590C /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		855703522C9C17A80086590C /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		855703542C9C17B20086590C /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		855703562C9C19D00086590C /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,13 +73,13 @@
 		855703212C9AA99F0086590C /* NewsApp-TestTask */ = {
 			isa = PBXGroup;
 			children = (
-				8557033A2C9AAAF00086590C /* Resources */,
-				855703392C9AAAEA0086590C /* Extensions */,
-				855703382C9AAAD10086590C /* Modules */,
-				855703352C9AAAB10086590C /* Common */,
-				855703342C9AAAAC0086590C /* Models */,
 				855703302C9AAA3D0086590C /* Application */,
 				855703322C9AAA8D0086590C /* Core */,
+				855703342C9AAAAC0086590C /* Models */,
+				855703352C9AAAB10086590C /* Common */,
+				855703382C9AAAD10086590C /* Modules */,
+				855703392C9AAAEA0086590C /* Extensions */,
+				8557033A2C9AAAF00086590C /* Resources */,
 				855703282C9AA9A10086590C /* Preview Content */,
 			);
 			path = "NewsApp-TestTask";
@@ -81,6 +105,7 @@
 		855703312C9AAA700086590C /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
+				8557033B2C9C12F40086590C /* ModuleFactory */,
 			);
 			path = DependencyInjection;
 			sourceTree = "<group>";
@@ -110,8 +135,8 @@
 		855703352C9AAAB10086590C /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				855703372C9AAAC40086590C /* Protocols */,
 				855703362C9AAAC00086590C /* UI */,
+				855703372C9AAAC40086590C /* Protocols */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -126,6 +151,8 @@
 		855703372C9AAAC40086590C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				8557034E2C9C16820086590C /* Coordinator.swift */,
+				855703502C9C16980086590C /* Routable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -133,6 +160,8 @@
 		855703382C9AAAD10086590C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				855703472C9C15E60086590C /* Launch */,
+				855703422C9C14B80086590C /* AppCoordinator */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -140,6 +169,7 @@
 		855703392C9AAAEA0086590C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				855703562C9C19D00086590C /* Font.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -150,6 +180,52 @@
 				855703262C9AA9A10086590C /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		8557033B2C9C12F40086590C /* ModuleFactory */ = {
+			isa = PBXGroup;
+			children = (
+				8557033C2C9C131B0086590C /* CoordinatorFactoryProtocols.swift */,
+				8557033E2C9C13D60086590C /* ModuleFactory.swift */,
+				855703402C9C146D0086590C /* ModuleFactoryProtocols.swift */,
+			);
+			path = ModuleFactory;
+			sourceTree = "<group>";
+		};
+		855703422C9C14B80086590C /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				855703432C9C14D50086590C /* AppCoordinator.swift */,
+				855703452C9C14DF0086590C /* AppCoordinatorView.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		855703472C9C15E60086590C /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				855703482C9C15F90086590C /* Launch */,
+				855703492C9C16030086590C /* Coordinator */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		855703482C9C15F90086590C /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				855703522C9C17A80086590C /* LaunchView.swift */,
+				855703542C9C17B20086590C /* LaunchViewModel.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		855703492C9C16030086590C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8557034A2C9C161B0086590C /* LaunchCoordinator.swift */,
+				8557034C2C9C16260086590C /* LaunchCoordinatorView.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,7 +298,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8557034D2C9C16260086590C /* LaunchCoordinatorView.swift in Sources */,
+				855703532C9C17A80086590C /* LaunchView.swift in Sources */,
 				855703232C9AA99F0086590C /* NewsAppTestTaskApp.swift in Sources */,
+				8557033F2C9C13D60086590C /* ModuleFactory.swift in Sources */,
+				8557034B2C9C161B0086590C /* LaunchCoordinator.swift in Sources */,
+				855703442C9C14D50086590C /* AppCoordinator.swift in Sources */,
+				855703412C9C146D0086590C /* ModuleFactoryProtocols.swift in Sources */,
+				855703572C9C19D00086590C /* Font.swift in Sources */,
+				8557033D2C9C131B0086590C /* CoordinatorFactoryProtocols.swift in Sources */,
+				855703462C9C14DF0086590C /* AppCoordinatorView.swift in Sources */,
+				8557034F2C9C16820086590C /* Coordinator.swift in Sources */,
+				855703512C9C16980086590C /* Routable.swift in Sources */,
+				855703552C9C17B20086590C /* LaunchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +447,8 @@
 				DEVELOPMENT_TEAM = C96F6SJTDJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NewsApp-TestTask/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -388,6 +478,8 @@
 				DEVELOPMENT_TEAM = C96F6SJTDJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NewsApp-TestTask/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
