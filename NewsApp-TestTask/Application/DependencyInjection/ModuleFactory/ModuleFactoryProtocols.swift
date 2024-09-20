@@ -32,3 +32,7 @@ protocol ProfileViewFactory {
     func makeProfileView(coordinator: ProfileCoordinator) -> ProfileView
 }
 
+@MainActor
+protocol DetailsViewFactory {
+    func makeDetailsView(coordinator: NewsCoordinator, article: NewsArticle) -> DetailsView
+}

@@ -55,6 +55,16 @@
 		85D648D32C9D89C40068BD2F /* NewsServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D648D22C9D89C40068BD2F /* NewsServiceError.swift */; };
 		85D648D52C9D89D40068BD2F /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D648D42C9D89D40068BD2F /* NewsService.swift */; };
 		85D648D72C9D97790068BD2F /* NewsArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D648D62C9D97790068BD2F /* NewsArticleView.swift */; };
+		85D648DB2C9D9B370068BD2F /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D648DA2C9D9B370068BD2F /* DetailsView.swift */; };
+		85D648DD2C9D9B490068BD2F /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D648DC2C9D9B490068BD2F /* DetailsViewModel.swift */; };
+		85D648DF2C9DD45A0068BD2F /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85D648DE2C9DD45A0068BD2F /* Merriweather-Regular.ttf */; };
+		85D648E62C9DEF490068BD2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85D648E52C9DEF490068BD2F /* GoogleService-Info.plist */; };
+		85D648E92C9DEFFD0068BD2F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 85D648E82C9DEFFD0068BD2F /* FirebaseAnalytics */; };
+		85D648EB2C9DEFFD0068BD2F /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 85D648EA2C9DEFFD0068BD2F /* FirebaseAnalyticsOnDeviceConversion */; };
+		85D648ED2C9DEFFD0068BD2F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 85D648EC2C9DEFFD0068BD2F /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		85D648EF2C9DEFFD0068BD2F /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 85D648EE2C9DEFFD0068BD2F /* FirebaseAppCheck */; };
+		85D648F12C9DEFFD0068BD2F /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 85D648F02C9DEFFD0068BD2F /* FirebaseAppDistribution-Beta */; };
+		85D648F32C9DF0060068BD2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D648F22C9DF0060068BD2F /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +117,11 @@
 		85D648D22C9D89C40068BD2F /* NewsServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsServiceError.swift; sourceTree = "<group>"; };
 		85D648D42C9D89D40068BD2F /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		85D648D62C9D97790068BD2F /* NewsArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleView.swift; sourceTree = "<group>"; };
+		85D648DA2C9D9B370068BD2F /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		85D648DC2C9D9B490068BD2F /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		85D648DE2C9DD45A0068BD2F /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Regular.ttf"; sourceTree = "<group>"; };
+		85D648E52C9DEF490068BD2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		85D648F22C9DF0060068BD2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +129,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D648EF2C9DEFFD0068BD2F /* FirebaseAppCheck in Frameworks */,
+				85D648E92C9DEFFD0068BD2F /* FirebaseAnalytics in Frameworks */,
+				85D648F12C9DEFFD0068BD2F /* FirebaseAppDistribution-Beta in Frameworks */,
+				85D648ED2C9DEFFD0068BD2F /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				85D648EB2C9DEFFD0068BD2F /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +159,7 @@
 		855703212C9AA99F0086590C /* NewsApp-TestTask */ = {
 			isa = PBXGroup;
 			children = (
+				85D648E52C9DEF490068BD2F /* GoogleService-Info.plist */,
 				855703302C9AAA3D0086590C /* Application */,
 				855703322C9AAA8D0086590C /* Core */,
 				855703342C9AAAAC0086590C /* Models */,
@@ -163,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				855703222C9AA99F0086590C /* NewsAppTestTaskApp.swift */,
+				85D648F22C9DF0060068BD2F /* AppDelegate.swift */,
 				855703312C9AAA700086590C /* DependencyInjection */,
 			);
 			path = Application;
@@ -371,6 +393,7 @@
 		855703872C9C8EAE0086590C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				85D648DE2C9DD45A0068BD2F /* Merriweather-Regular.ttf */,
 				855703942C9C94190086590C /* Inter-VariableFont_opsz,wght.ttf */,
 				8557039A2C9C95BD0086590C /* LibreFranklin-VariableFont_wght.ttf */,
 				855703962C9C94290086590C /* SchibstedGrotesk-VariableFont_wght.ttf */,
@@ -400,8 +423,8 @@
 		8557039E2C9C99080086590C /* News */ = {
 			isa = PBXGroup;
 			children = (
-				855703A12C9C99240086590C /* NewsView.swift */,
-				8557039F2C9C991B0086590C /* NewsViewModel.swift */,
+				85D648D82C9D9B180068BD2F /* News */,
+				85D648D92C9D9B290068BD2F /* Details */,
 				855703AC2C9C9AEF0086590C /* Coordinator */,
 			);
 			path = News;
@@ -455,6 +478,24 @@
 			path = NewsModels;
 			sourceTree = "<group>";
 		};
+		85D648D82C9D9B180068BD2F /* News */ = {
+			isa = PBXGroup;
+			children = (
+				855703A12C9C99240086590C /* NewsView.swift */,
+				8557039F2C9C991B0086590C /* NewsViewModel.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		85D648D92C9D9B290068BD2F /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				85D648DA2C9D9B370068BD2F /* DetailsView.swift */,
+				85D648DC2C9D9B490068BD2F /* DetailsViewModel.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -472,6 +513,11 @@
 			);
 			name = "NewsApp-TestTask";
 			packageProductDependencies = (
+				85D648E82C9DEFFD0068BD2F /* FirebaseAnalytics */,
+				85D648EA2C9DEFFD0068BD2F /* FirebaseAnalyticsOnDeviceConversion */,
+				85D648EC2C9DEFFD0068BD2F /* FirebaseAnalyticsWithoutAdIdSupport */,
+				85D648EE2C9DEFFD0068BD2F /* FirebaseAppCheck */,
+				85D648F02C9DEFFD0068BD2F /* FirebaseAppDistribution-Beta */,
 			);
 			productName = "NewsApp-TestTask";
 			productReference = 8557031F2C9AA99F0086590C /* NewsApp-TestTask.app */;
@@ -502,6 +548,7 @@
 			);
 			mainGroup = 855703162C9AA99F0086590C;
 			packageReferences = (
+				85D648E72C9DEFFD0068BD2F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 855703202C9AA99F0086590C /* Products */;
 			projectDirPath = "";
@@ -521,7 +568,9 @@
 				855703972C9C942A0086590C /* SchibstedGrotesk-VariableFont_wght.ttf in Resources */,
 				855703272C9AA9A10086590C /* Assets.xcassets in Resources */,
 				8557039B2C9C95BD0086590C /* LibreFranklin-VariableFont_wght.ttf in Resources */,
+				85D648DF2C9DD45A0068BD2F /* Merriweather-Regular.ttf in Resources */,
 				855703952C9C94190086590C /* Inter-VariableFont_opsz,wght.ttf in Resources */,
+				85D648E62C9DEF490068BD2F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,9 +598,12 @@
 				8557034B2C9C161B0086590C /* LaunchCoordinator.swift in Sources */,
 				855703442C9C14D50086590C /* AppCoordinator.swift in Sources */,
 				855703412C9C146D0086590C /* ModuleFactoryProtocols.swift in Sources */,
+				85D648DD2C9D9B490068BD2F /* DetailsViewModel.swift in Sources */,
+				85D648DB2C9D9B370068BD2F /* DetailsView.swift in Sources */,
 				855703772C9C7A860086590C /* PaywallViewModel.swift in Sources */,
 				855703572C9C19D00086590C /* Font.swift in Sources */,
 				855703672C9C20350086590C /* OnboardingViewModel.swift in Sources */,
+				85D648F32C9DF0060068BD2F /* AppDelegate.swift in Sources */,
 				855703B22C9C9D300086590C /* MainCoordinator.swift in Sources */,
 				8557033D2C9C131B0086590C /* CoordinatorFactoryProtocols.swift in Sources */,
 				85D648D32C9D89C40068BD2F /* NewsServiceError.swift in Sources */,
@@ -784,6 +836,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		85D648E72C9DEFFD0068BD2F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		85D648E82C9DEFFD0068BD2F /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85D648E72C9DEFFD0068BD2F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		85D648EA2C9DEFFD0068BD2F /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85D648E72C9DEFFD0068BD2F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		85D648EC2C9DEFFD0068BD2F /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85D648E72C9DEFFD0068BD2F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		85D648EE2C9DEFFD0068BD2F /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85D648E72C9DEFFD0068BD2F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		85D648F02C9DEFFD0068BD2F /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85D648E72C9DEFFD0068BD2F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 855703172C9AA99F0086590C /* Project object */;
 }

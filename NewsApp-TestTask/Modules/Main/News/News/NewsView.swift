@@ -66,7 +66,10 @@ struct NewsView: View {
                                     }
                                 } else {
                                     ForEach(viewModel.articles, id: \.self) { article in
-                                        NewsArticleView(article: article)
+                                        NewsArticleView(
+                                            article: article,
+                                            navigateAction: { viewModel.navigateToDetails(article: article) }
+                                        )
                                     }
                                 }
                             }

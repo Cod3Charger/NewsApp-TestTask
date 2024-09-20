@@ -9,42 +9,47 @@ import SwiftUI
 
 struct NewsArticleView: View {
     let article: NewsArticle
+    let navigateAction: () -> Void
 
     var body: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 5) {
-                Text(article.title)
-                    .font(.headline)
-                    .lineLimit(2)
-                    .truncationMode(.tail)
+        Button {
+            navigateAction()
+        } label: {
+            HStack {
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(article.title).font(Font.interSemiBold18)
+                        .foregroundStyle(.black)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
 
-                HStack {
-                    Text(article.author ?? "Unknown Author").font(Font.interRegular12)
-                        .foregroundColor(.secondary)
+                    HStack {
+                        Text(article.author ?? "Unknown Author").font(Font.interRegular12)
+                            .foregroundColor(.secondary)
 
-                    Circle()
-                        .fill(Color.secondary)
-                        .frame(width: 2, height: 2)
+                        Circle()
+                            .fill(Color.secondary)
+                            .frame(width: 2, height: 2)
 
-                    Text(formatDate(article.publishedAt)).font(Font.interRegular12)
-                        .foregroundColor(.secondary)
+                        Text(formatDate(article.publishedAt)).font(Font.interRegular12)
+                            .foregroundColor(.secondary)
+                    }
                 }
-            }
-            .padding(.leading, 16)
+                .padding(.leading, 16)
 
-            Spacer()
+                Spacer()
 
-            AsyncImage(url: URL(string: article.urlToImage ?? "")) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 80)
-                    .cornerRadius(15)
-            } placeholder: {
-                ProgressView()
-                    .frame(width: 100, height: 80)
+                AsyncImage(url: URL(string: article.urlToImage ?? "")) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80, height: 60)
+                        .cornerRadius(15)
+                } placeholder: {
+                    ProgressView()
+                        .frame(width: 80, height: 60)
+                }
+                .padding(.trailing, 10)
             }
-            .padding(.trailing, 10)
         }
     }
 }
@@ -77,5 +82,5 @@ private extension NewsArticleView {
             publishedAt: "2024-09-20T12:00:00Z"
         )
 
-    return NewsArticleView(article: article)
+    return NewsArticleView(article: article, navigateAction: {})
 }

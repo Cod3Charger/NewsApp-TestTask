@@ -74,7 +74,9 @@ extension ModuleFactory: NewsViewFactory {
 
     func makeNewsView(coordinator:  NewsCoordinator) -> NewsView {
 
-        let router = NewsViewModel.Router.init {}
+        let router = NewsViewModel.Router.init { article in
+            coordinator.navigateToDetails(article: article)
+        }
 
         let viewModel = NewsViewModel(
             newsService: newsService,
@@ -98,6 +100,25 @@ extension ModuleFactory: ProfileViewFactory {
         )
 
         return ProfileView(viewModel: viewModel)
+    }
+}
+
+// MARK: ProfileViewFactory
+
+extension ModuleFactory: DetailsViewFactory {
+
+    func makeDetailsView(coordinator:  NewsCoordinator, article: NewsArticle) -> DetailsView {
+
+        let router = DetailsViewModel.Router.init {
+            coordinator.pop()
+        }
+
+        let viewModel = DetailsViewModel(
+            article: article,
+            router: router
+        )
+
+        return DetailsView(viewModel: viewModel)
     }
 }
 

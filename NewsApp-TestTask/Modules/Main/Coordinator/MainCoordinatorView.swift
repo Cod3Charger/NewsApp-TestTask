@@ -13,6 +13,7 @@ struct MainCoordinatorView: View {
     @StateObject private var coordinator: MainCoordinator
 
     @State private var selectedTab = 0
+    @State private var isTabBarHidden = false
 
     init(moduleFactory: CoordinatorFactory, coordinator: MainCoordinator) {
         self.moduleFactory = moduleFactory
@@ -22,11 +23,21 @@ struct MainCoordinatorView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $selectedTab) {
-                NewsCoordinatorView(moduleFactory: self.moduleFactory, coordinator: NewsCoordinator())
-                    .tag(0)
+                NewsCoordinatorView(
+                    moduleFactory: self.moduleFactory,
+                    coordinator: NewsCoordinator(onTabBarVisibilityChange: { isHidden in
+                        withAnimation {
+                            isTabBarHidden = isHidden
+                        }
+                    })
+                )
+                .tag(0)
+
                 ProfileCoordinatorView(moduleFactory: self.moduleFactory, coordinator: ProfileCoordinator())
-                    .tag(1)
+                .tag(1)
             }
+
+
 
             ZStack {
                 HStack{
@@ -42,6 +53,7 @@ struct MainCoordinatorView: View {
             .frame(width: UIScreen.main.bounds.width, height: 80)
             .background(Color(uiColor: .tabBar).opacity(0.7))
             .cornerRadius(15, corners: [.topLeft, .topRight])
+            .opacity(isTabBarHidden ? 0 : 1)
         }
         .ignoresSafeArea(edges: .bottom)
     }

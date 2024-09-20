@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
 struct NewsAppTestTaskApp: App {
+
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     private let moduleFactory: ModuleFactory = {
         return ModuleFactory()
@@ -16,14 +19,8 @@ struct NewsAppTestTaskApp: App {
 
     private let appCoordinator = AppCoordinator()
 
-    // TODO: remove later
-    init () {
-        for family in  UIFont .familyNames {
-            print ( "Family: \(family) " )
-            for name in  UIFont .fontNames(forFamilyName: family) {
-                print ( " - \(name) " )
-            }
-        }
+    init() {
+        FirebaseApp.configure() 
     }
 
     var body: some Scene {

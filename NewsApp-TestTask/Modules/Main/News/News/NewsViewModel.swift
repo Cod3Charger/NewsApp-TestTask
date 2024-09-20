@@ -77,12 +77,16 @@ extension NewsViewModel {
             )
         ]
     }
+
+    func navigateToDetails(article: NewsArticle) {
+        router.navigateToDetails(article)
+    }
 }
 
 // MARK: - Router
 
 extension NewsViewModel {
     struct Router {
-        let navigateToNextScreen: () -> Void
+        let navigateToDetails: (NewsArticle) -> Void
     }
 }

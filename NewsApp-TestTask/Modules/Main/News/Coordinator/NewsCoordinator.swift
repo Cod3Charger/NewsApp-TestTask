@@ -11,14 +11,22 @@ final class NewsCoordinator: Coordinator {
 
     enum Screen: Routable {
         case news
+        case details(NewsArticle)
     }
 
     @Published var navigationPath: [Screen] = []
 
-    var goToNextScreen: (() -> Void)?
+    var goToDetailsScreen: (() -> Void)?
+    var onTabBarVisibilityChange: ((Bool) -> Void)?
 
-    init(goToNextScreen: (() -> Void)? = nil) {
-        self.goToNextScreen = goToNextScreen
+    init(goToNextScreen: (() -> Void)? = nil, onTabBarVisibilityChange: ((Bool) -> Void)? = nil) {
+        self.goToDetailsScreen = goToNextScreen
+        self.onTabBarVisibilityChange = onTabBarVisibilityChange
+    }
+
+    func navigateToDetails(article: NewsArticle) {
+        onTabBarVisibilityChange?(true)
+        navigationPath.append(.details(article))
     }
 
     func popToRoot() {
@@ -28,6 +36,7 @@ final class NewsCoordinator: Coordinator {
 
     func pop() {
         if !navigationPath.isEmpty {
+            onTabBarVisibilityChange?(false)
             navigationPath.removeLast()
         }
     }
