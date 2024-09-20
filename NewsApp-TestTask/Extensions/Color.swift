@@ -16,5 +16,9 @@ extension UIColor {
     static var tabBar: UIColor { return UIColor(hex: "#FCE9EE") }
 
     // MARK: - News
-    static var newsNavBar: UIColor { return UIColor(hex: "#E9EEFA") }
+    static var newsBlue: UIColor { return UIColor(hex: "#E9EEFA") }
+
+    // MARK: - Profile
+    static var profileBlue: UIColor { return UIColor(hex: "#577CDA") }
+    static var profileSubscribe: UIColor { return UIColor(hex: "#D9D9D9") }
 }

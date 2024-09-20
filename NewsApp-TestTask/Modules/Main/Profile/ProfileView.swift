@@ -16,7 +16,53 @@ struct ProfileView: View {
     }
 
     var body: some View {
-        Text("Profile")
+        HStack {
+            Image("avatar")
+            VStack(alignment: .leading) {
+                Text("Dianne Russell").font(Font.interSemiBold24)
+                HStack {
+                    Image("badge")
+                    Text("Bookworm")
+                        .foregroundStyle(Color(uiColor: .profileBlue))
+                }
+                .padding(.top, -10)
+            }
+            .padding(.leading, 14)
+        }
+        .padding(.top, 16)
+
+        Divider()
+            .padding(.horizontal, 30)
+            .padding(.top, 10)
+
+        HStack {
+            Text("Premium").font(Font.interBold24)
+            Spacer()
+            Button(action: {
+
+            }) {
+                Text("Subscribe").font(Font.interSemiBold14)
+                    .foregroundStyle(.black)
+                    .frame(width: 116, height: 40)
+                    .background(Color(uiColor: .profileSubscribe))
+                    .cornerRadius(10)
+            }
+        }
+        .padding(.horizontal, 30)
+        .padding(.vertical, 10)
+
+        Divider()
+            .padding(.horizontal, 30)
+
+        HStack {
+            Text("Bookmarks").font(Font.interBold24)
+            Spacer()
+        }
+        .padding(.horizontal, 30)
+        .padding(.vertical, 10)
+
+
+        Spacer()
     }
 }
 

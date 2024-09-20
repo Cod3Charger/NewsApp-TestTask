@@ -22,7 +22,7 @@ struct NewsView: View {
         ZStack(alignment: .top) {
             VStack {
                 Rectangle()
-                    .fill(Color(uiColor: .newsNavBar))
+                    .fill(Color(uiColor: .newsBlue))
                     .frame(width: UIScreen.main.bounds.width, height: 130)
 
                 Spacer()
@@ -42,12 +42,12 @@ struct NewsView: View {
                                 Text(segment).font(Font.interSemiBold14)
                                     .padding(.vertical, 8)
                                     .padding(.horizontal, 23)
-                                    .background(selectedSegment == segment ? Color(uiColor: .newsNavBar) : .white)
+                                    .background(selectedSegment == segment ? Color(uiColor: .newsBlue) : .white)
                                     .foregroundStyle(.black)
                                     .cornerRadius(30)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 20)
-                                            .stroke(Color(uiColor: .newsNavBar), lineWidth: 2)
+                                            .stroke(Color(uiColor: .newsBlue), lineWidth: 2)
                                     )
                             }
                         }

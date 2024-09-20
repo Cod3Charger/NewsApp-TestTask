@@ -173,6 +173,7 @@
 		855703332C9AAA900086590C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				85AEF8172C9D7AA500498B73 /* NewsAPI */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -418,6 +419,13 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		85AEF8172C9D7AA500498B73 /* NewsAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewsAPI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -434,6 +442,8 @@
 			dependencies = (
 			);
 			name = "NewsApp-TestTask";
+			packageProductDependencies = (
+			);
 			productName = "NewsApp-TestTask";
 			productReference = 8557031F2C9AA99F0086590C /* NewsApp-TestTask.app */;
 			productType = "com.apple.product-type.application";
@@ -462,6 +472,8 @@
 				Base,
 			);
 			mainGroup = 855703162C9AA99F0086590C;
+			packageReferences = (
+			);
 			productRefGroup = 855703202C9AA99F0086590C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
