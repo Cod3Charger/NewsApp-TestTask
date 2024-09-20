@@ -10,9 +10,6 @@ import SwiftUI
 struct NewsView: View {
 
     @StateObject private var viewModel: NewsViewModel
-    @State private var selectedSegment = "Travel"
-
-    let segments = ["Travel", "Technology", "Business"]
 
     init(viewModel: NewsViewModel) {
         self._viewModel = StateObject(wrappedValue: viewModel)
@@ -35,14 +32,15 @@ struct NewsView: View {
                         .padding(.top, 75)
 
                     HStack(spacing: 10) {
-                        ForEach(segments, id: \.self) { segment in
+                        ForEach(NewsCategory.allCases, id: \.self) { segment in
                             Button(action: {
-                                selectedSegment = segment
+                                viewModel.selectedSegment = segment
                             }) {
-                                Text(segment).font(Font.interSemiBold14)
+                                Text(segment.rawValue.capitalized)
+                                    .font(Font.interSemiBold14)
                                     .padding(.vertical, 8)
                                     .padding(.horizontal, 23)
-                                    .background(selectedSegment == segment ? Color(uiColor: .newsBlue) : .white)
+                                    .background(viewModel.selectedSegment == segment ? Color(uiColor: .newsBlue) : .white)
                                     .foregroundStyle(.black)
                                     .cornerRadius(30)
                                     .overlay(
@@ -54,11 +52,38 @@ struct NewsView: View {
                     }
                     .padding(.horizontal, 16)
                     .padding(.top, 10)
+
+                    if viewModel.isLoading {
+                        ProgressView("News loading...")
+                            .padding(.top, 120)
+                    } else {
+                        ScrollView {
+                            VStack(spacing: 20) {
+                                if viewModel.articles.isEmpty {
+                                    if let errorMessage = viewModel.errorMessage {
+                                        Text("Ошибка: \(errorMessage)")
+                                            .foregroundColor(.red)
+                                    }
+                                } else {
+                                    ForEach(viewModel.articles, id: \.self) { article in
+                                        NewsArticleView(article: article)
+                                    }
+                                }
+                            }
+                            .padding(.top, 20)
+                        }
+                    }
                 },
                 alignment: .top
             )
         }
         .ignoresSafeArea(edges: .top)
+        .onAppear {
+            Task {
+                await viewModel.loadNews(for: viewModel.selectedSegment)
+                viewModel.loadTestArticles()
+            }
+        }
     }
 }
 

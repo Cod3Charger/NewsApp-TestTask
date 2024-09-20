@@ -11,6 +11,8 @@ final class ModuleFactory: CoordinatorFactory {
     /*
      Here can be other factories, builders, etc
      */
+
+    let newsService = NewsService()
 }
 
 // MARK: LaunchViewFactory
@@ -75,6 +77,7 @@ extension ModuleFactory: NewsViewFactory {
         let router = NewsViewModel.Router.init {}
 
         let viewModel = NewsViewModel(
+            newsService: newsService,
             router: router
         )
 
