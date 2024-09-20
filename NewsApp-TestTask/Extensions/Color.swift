@@ -9,6 +9,10 @@ import SwiftUI
 
 extension UIColor {
 
+    // MARK:  - Onboarding
+    static var googleTextGray: UIColor { return UIColor(hex: "#667080") }
+    static var googleButtonGray: UIColor { return UIColor(hex: "#EEF1F4") }
+
     // MARK:  - Paywall
     static var paywallRed: UIColor { return UIColor(hex: "#D32621") }
 

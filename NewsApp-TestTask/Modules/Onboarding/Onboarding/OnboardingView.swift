@@ -6,13 +6,13 @@
 //
 
 import SwiftUI
-
-import SwiftUI
+import FirebaseAuth
 
 struct OnboardingView: View {
 
     @StateObject private var viewModel: OnboardingViewModel
     @State var isShowingBottomSheet = true
+    @State private var userLoggedIn = (Auth.auth().currentUser != nil)
 
     init(viewModel: OnboardingViewModel) {
         self._viewModel = StateObject(wrappedValue: viewModel)
@@ -64,17 +64,43 @@ private extension OnboardingView {
             }
             Spacer()
             
-            Button(action: {
-                viewModel.router.navigateToNextScreen()
-            }) {
-                Text("Sign in with Google").font(.system(size: 18, weight: .bold))
-                    .foregroundColor(.white)
+            if userLoggedIn {
+                Button {
+                    viewModel.router.navigateToNextScreen()
+                } label: {
+                    HStack {
+                        Image("google")
+                        Text("You already logged in").font(Font.poppinsSemiBold16)
+                            .foregroundColor(Color(uiColor: .googleTextGray))
+                    }
                     .padding()
-                    .background(Color.blue)
+                    .background(Color(uiColor: .googleButtonGray))
                     .cornerRadius(10)
+                }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 40)
+            } else {
+                Button(action: {
+                    Task {
+                        do {
+                            try await Authentication().googleOauth()
+                        } catch AuthenticationError.runtimeError(_) {
+
+                        }
+                    }
+                }) {
+                    HStack {
+                        Image("google")
+                        Text("Sign in with Google").font(Font.poppinsSemiBold16)
+                            .foregroundColor(Color(uiColor: .googleTextGray))
+                    }
+                    .padding()
+                    .background(Color(uiColor: .googleButtonGray))
+                    .cornerRadius(10)
+                }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 40)
             }
-            .padding(.horizontal, 20)
-            .padding(.bottom, 40)
         }
     }
 }

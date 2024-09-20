@@ -20,4 +20,5 @@ extension Font {
     static var libreFranklinBold22: Font { return Font.custom("LibreFranklinRoman-Bold", size: 22) }
     static var libreFranklinBold12: Font { return Font.custom("LibreFranklinRoman-Bold", size: 12) }
     static var merriweatherRegular16: Font { return Font.custom("Merriweather-Regular", size: 16) }
+    static var poppinsSemiBold16: Font { return Font.custom("Poppins-SemiBold", size: 16) }
 }
