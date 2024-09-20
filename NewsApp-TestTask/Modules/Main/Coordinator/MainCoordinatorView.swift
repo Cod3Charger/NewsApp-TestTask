@@ -39,11 +39,11 @@ struct MainCoordinatorView: View {
                     }
                 }
             }
-            .frame(width: 390, height: 80)
-            .background(Color(uiColor: .tabbar).opacity(0.7))
+            .frame(width: UIScreen.main.bounds.width, height: 80)
+            .background(Color(uiColor: .tabBar).opacity(0.7))
             .cornerRadius(15, corners: [.topLeft, .topRight])
         }
-        .ignoresSafeArea(.all)
+        .ignoresSafeArea(edges: .bottom)
     }
 }
 

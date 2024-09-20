@@ -53,7 +53,7 @@ private extension PaywallView {
     @ViewBuilder
     var closeButton: some View {
         Button(action: {
-
+            viewModel.router.navigateToNextScreen()
         }) {
             Image("closeButton")
                 .resizable()
