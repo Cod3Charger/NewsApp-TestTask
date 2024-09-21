@@ -12,6 +12,7 @@ final class ModuleFactory: CoordinatorFactory {
      Here can be other factories, builders, etc
      */
 
+    let storeKitManager = StoreKitManager()
     let newsService = NewsService()
 }
 
@@ -61,6 +62,7 @@ extension ModuleFactory: PaywallViewFactory {
         }
 
         let viewModel = PaywallViewModel(
+            storeKitManager: storeKitManager,
             router: router
         )
 
@@ -96,6 +98,7 @@ extension ModuleFactory: ProfileViewFactory {
         let router = ProfileViewModel.Router.init {}
 
         let viewModel = ProfileViewModel(
+            storeKitManager: storeKitManager,
             router: router
         )
 

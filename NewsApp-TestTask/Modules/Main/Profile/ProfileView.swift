@@ -38,15 +38,14 @@ struct ProfileView: View {
         HStack {
             Text("Premium").font(Font.interBold24)
             Spacer()
-            Button(action: {
-
-            }) {
-                Text("Subscribe").font(Font.interSemiBold14)
+            Button(action: {}) {
+                Text(viewModel.isPurchased ? "Enabled" : "Subscribe").font(Font.interSemiBold14)
                     .foregroundStyle(.black)
                     .frame(width: 116, height: 40)
                     .background(Color(uiColor: .profileSubscribe))
                     .cornerRadius(10)
             }
+            .disabled(true)
         }
         .padding(.horizontal, 30)
         .padding(.vertical, 10)

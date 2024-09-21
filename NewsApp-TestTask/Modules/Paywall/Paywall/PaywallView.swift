@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct PaywallView: View {
 
@@ -74,24 +75,70 @@ private extension PaywallView {
                 .foregroundStyle(.secondary)
             Spacer()
 
-            Text("$4.49 per month").font(Font.helveticaBold16)
-            Button(action: {
-                viewModel.router.navigateToNextScreen()
-            }) {
-                Text("Subscribe").font(Font.libreFranklinBold22)
-                    .frame(width: 360, height: 60)
-                    .foregroundStyle(.white)
-                    .background(Color(UIColor.paywallRed))
-                    .cornerRadius(20)
-            }
-            .padding(.bottom, 10)
+            if !viewModel.isPurchased {
+                if let product = viewModel.product {
+                    HStack {
+                        Text(product.displayPrice).font(Font.helveticaBold16)
+                        Text("per month").font(Font.helveticaBold16)
+                    }
+                    Button(action: {
+                        Task {
+                            try await viewModel.storeKitManager.purchase(product)
+                        }
+                        viewModel.navigateToNextScreen()
+                    }) {
+                        Text("Subscribe").font(Font.libreFranklinBold22)
+                            .frame(width: 360, height: 60)
+                            .foregroundStyle(.white)
+                            .background(Color(UIColor.paywallRed))
+                            .cornerRadius(20)
+                    }
+                    .padding(.bottom, 10)
 
-            HStack(spacing: 15) {
-                Text("Restore Purchases").font(Font.libreFranklinBold12)
-                Text("Terms of Use").font(Font.libreFranklinBold12)
-                Text("Privacy Policy").font(Font.libreFranklinBold12)
+                    HStack(spacing: 15) {
+                        Text("Restore Purchases").font(Font.libreFranklinBold12)
+                        Text("Terms of Use").font(Font.libreFranklinBold12)
+                        Text("Privacy Policy").font(Font.libreFranklinBold12)
+                    }
+                    .padding(.bottom, 40)
+                    .onChange(of: viewModel.storeKitManager.purchasedSubscribes) { subscribe in
+                        Task {
+                            viewModel.isPurchased = (try? await viewModel.storeKitManager.isPurchased(product)) ?? false
+                        }
+                    }
+                } else {
+                    Text("You can't buy subcribe now...").font(Font.helveticaBold16)
+                    Button {
+                        viewModel.navigateToNextScreen()
+                    } label: {
+                        HStack {
+                            Text("Go!").font(Font.poppinsSemiBold16)
+                                .foregroundColor(Color(uiColor: .googleTextGray))
+                        }
+                        .frame(width: 100, height: 44)
+                        .background(Color(uiColor: .googleButtonGray))
+                        .cornerRadius(10)
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 40)
+                }
+            } else {
+                Text("You are already have subscription").font(Font.poppinsSemiBold16)
+                Button {
+                    viewModel.navigateToNextScreen()
+                } label: {
+                    HStack {
+                        Text("Go!").font(Font.poppinsSemiBold16)
+                            .foregroundColor(Color(uiColor: .googleTextGray))
+                    }
+                    .frame(width: 100, height: 44)
+                    .background(Color(uiColor: .googleButtonGray))
+                    .cornerRadius(10)
+                }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 40)
+
             }
-            .padding(.bottom, 40)
         }
     }
 }

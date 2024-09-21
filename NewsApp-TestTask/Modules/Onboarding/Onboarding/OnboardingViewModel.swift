@@ -55,6 +55,10 @@ extension OnboardingViewModel {
             }
         }
     }
+
+    func navigateToNextScreen() {
+        router.navigateToNextScreen()
+    }
 }
 
 // MARK: - Router

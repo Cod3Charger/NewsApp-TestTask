@@ -80,7 +80,7 @@ private extension OnboardingView {
                 Spacer()
                 Text("You already logged in").font(Font.poppinsSemiBold16)
                 Button {
-                    viewModel.router.navigateToNextScreen()
+                    viewModel.navigateToNextScreen()
                 } label: {
                     HStack {
                         Text("Go!").font(Font.poppinsSemiBold16)
