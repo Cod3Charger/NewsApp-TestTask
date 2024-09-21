@@ -25,10 +25,8 @@ struct MainCoordinatorView: View {
             TabView(selection: $selectedTab) {
                 NewsCoordinatorView(
                     moduleFactory: self.moduleFactory,
-                    coordinator: NewsCoordinator(onTabBarVisibilityChange: { isHidden in
-                        withAnimation {
-                            isTabBarHidden = isHidden
-                        }
+                    coordinator: NewsCoordinator(goToDetailsScreen: { article in
+                        self.coordinator.goToDetails(article)
                     })
                 )
                 .tag(0)

@@ -15,10 +15,10 @@ final class MainCoordinator: Coordinator {
 
     @Published var navigationPath: [Screen] = []
 
-    var goToNextScreen: (() -> Void)?
+    var goToDetails: ((NewsArticle) -> Void)
 
-    init(goToNextScreen: (() -> Void)? = nil) {
-        self.goToNextScreen = goToNextScreen
+    init(goToDetails: @escaping ((NewsArticle) -> Void)) {
+        self.goToDetails = goToDetails
     }
 
     func popToRoot() {

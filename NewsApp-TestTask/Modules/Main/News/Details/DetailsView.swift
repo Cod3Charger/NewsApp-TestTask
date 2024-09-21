@@ -125,9 +125,6 @@ private extension DetailsView {
 
 
 #Preview {
-    let moduleFactory = ModuleFactory()
-    let coordinator = NewsCoordinator()
-    
     let article =
     NewsArticle(
         source: Source(id: "1", name: "Test Source"),
@@ -138,6 +135,9 @@ private extension DetailsView {
         urlToImage: "https://24ai.tech/en/wp-content/uploads/sites/3/2023/10/01_product_1_sdelat-izobrazhenie-4-3-3-scaled.jpg",
         publishedAt: "2024-09-20T12:00:00Z"
     )
-    
+
+    let moduleFactory = ModuleFactory()
+    let coordinator = DetailsCoordinator(article: article, goToNewsScreen: {})
+
     return moduleFactory.makeDetailsView(coordinator: coordinator, article: article)
 }

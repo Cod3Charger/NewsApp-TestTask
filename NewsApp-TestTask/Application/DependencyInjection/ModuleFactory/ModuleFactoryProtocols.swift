@@ -34,5 +34,5 @@ protocol ProfileViewFactory {
 
 @MainActor
 protocol DetailsViewFactory {
-    func makeDetailsView(coordinator: NewsCoordinator, article: NewsArticle) -> DetailsView
+    func makeDetailsView(coordinator: DetailsCoordinator, article: NewsArticle) -> DetailsView
 }

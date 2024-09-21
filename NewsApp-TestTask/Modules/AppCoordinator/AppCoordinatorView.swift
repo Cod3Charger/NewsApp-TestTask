@@ -53,7 +53,18 @@ struct AppCoordinatorView: View {
         case .main:
             MainCoordinatorView(
                 moduleFactory: self.moduleFactory,
-                coordinator: MainCoordinator()
+                coordinator: MainCoordinator(goToDetails: { article in
+                    self.coordinator.change(flow: .details(article))
+                })
+            )
+        case .details(let article):
+            DetailsCoordinatorView(
+                moduleFactory: self.moduleFactory,
+                coordinator: DetailsCoordinator(
+                    article: article,
+                    goToNewsScreen: {
+                        self.coordinator.change(flow: .main )
+                    })
             )
         }
     }

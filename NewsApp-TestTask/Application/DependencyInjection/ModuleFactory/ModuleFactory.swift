@@ -110,10 +110,10 @@ extension ModuleFactory: ProfileViewFactory {
 
 extension ModuleFactory: DetailsViewFactory {
 
-    func makeDetailsView(coordinator:  NewsCoordinator, article: NewsArticle) -> DetailsView {
+    func makeDetailsView(coordinator: DetailsCoordinator, article: NewsArticle) -> DetailsView {
 
         let router = DetailsViewModel.Router.init {
-            coordinator.pop()
+            coordinator.goToNewsScreen()
         }
 
         let viewModel = DetailsViewModel(

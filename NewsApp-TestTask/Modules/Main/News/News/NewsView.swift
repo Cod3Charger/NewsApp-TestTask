@@ -92,7 +92,7 @@ struct NewsView: View {
 
 #Preview {
     let moduleFactory = ModuleFactory()
-    let coordinator = NewsCoordinator()
+    let coordinator = NewsCoordinator(goToDetailsScreen: {_ in })
 
     return moduleFactory.makeNewsView(coordinator: coordinator)
 }

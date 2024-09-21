@@ -54,7 +54,7 @@ struct ProfileView: View {
             .padding(.horizontal, 30)
 
         HStack {
-            Text("Bookmarks").font(Font.interBold24)
+            Text(viewModel.isPurchased ? "Bookmarks" : "").font(Font.interBold24)
             Spacer()
         }
         .padding(.horizontal, 30)

@@ -34,8 +34,6 @@ struct NewsCoordinatorView: View {
         switch screen {
         case .news:
             self.moduleFactory.makeNewsView(coordinator: self.coordinator)
-        case .details(let article):
-            self.moduleFactory.makeDetailsView(coordinator: self.coordinator, article: article)
         }
     }
 }
