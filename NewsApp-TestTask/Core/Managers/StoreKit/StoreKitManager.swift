@@ -110,6 +110,4 @@ class StoreKitManager: ObservableObject {
     func isPurchased(_ product: Product) async throws -> Bool {
         return purchasedSubscribes.contains(product)
     }
-
-
 }

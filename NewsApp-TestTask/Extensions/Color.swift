@@ -17,7 +17,8 @@ extension UIColor {
     static var paywallRed: UIColor { return UIColor(hex: "#D32621") }
 
     // MARK: - TabBar
-    static var tabBar: UIColor { return UIColor(hex: "#FCE9EE") }
+    static var tabBarMain: UIColor { return UIColor(hex: "#FCE9EE") }
+    static var tabBarDetails: UIColor { return UIColor(hex: "#F3EBE9") }
 
     // MARK: - News
     static var newsBlue: UIColor { return UIColor(hex: "#E9EEFA") }

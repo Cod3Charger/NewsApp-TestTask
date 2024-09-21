@@ -84,7 +84,6 @@ struct NewsView: View {
         .onAppear {
             Task {
                 await viewModel.loadNews(for: viewModel.selectedSegment)
-                viewModel.loadTestArticles()
             }
         }
     }

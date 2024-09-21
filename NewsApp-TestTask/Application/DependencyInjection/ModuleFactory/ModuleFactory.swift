@@ -13,6 +13,7 @@ final class ModuleFactory: CoordinatorFactory {
      */
 
     let storeKitManager = StoreKitManager()
+    let firebaseStoreManager = FirebaseStorageManager()
     let newsService = NewsService()
 }
 
@@ -118,6 +119,8 @@ extension ModuleFactory: DetailsViewFactory {
 
         let viewModel = DetailsViewModel(
             article: article,
+            firebaseStorageManager: firebaseStoreManager,
+            storeKitManager: storeKitManager,
             router: router
         )
 

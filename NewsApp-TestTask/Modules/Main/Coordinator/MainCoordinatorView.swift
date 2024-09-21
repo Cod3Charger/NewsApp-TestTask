@@ -49,7 +49,7 @@ struct MainCoordinatorView: View {
                 }
             }
             .frame(width: UIScreen.main.bounds.width, height: 80)
-            .background(Color(uiColor: .tabBar).opacity(0.7))
+            .background(Color(uiColor: .tabBarMain).opacity(0.7))
             .cornerRadius(15, corners: [.topLeft, .topRight])
             .opacity(isTabBarHidden ? 0 : 1)
         }

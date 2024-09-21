@@ -16,56 +16,65 @@ struct DetailsView: View {
     }
     
     var body: some View {
-        VStack {
-            Button(action: {
-                print("go to news")
-                viewModel.navigateToNewsScreen()
-            }) {
-                Text("TAP")
+        ZStack {
+            VStack {
+                Image("paywallBack")
+                    .resizable()
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.5)
+                    .ignoresSafeArea(.all)
+                Spacer()
             }
-            .contentShape(Rectangle())
-            
-            VStack(alignment: .leading) {
-                Text(viewModel.article.title).font(Font.interSemiBold32)
-                    .padding(.horizontal, 20)
-                HStack {
-                    Text(viewModel.article.author ?? "Unknown Author").font(Font.interRegular12)
-                        .foregroundColor(.secondary)
-                    
-                    Circle()
-                        .fill(Color.secondary)
-                        .frame(width: 2, height: 2)
-                    
-                    Text(formatDate(viewModel.article.publishedAt)).font(Font.interRegular12)
-                        .foregroundColor(.secondary)
-                    Spacer()
-                }
-                .padding(.horizontal, 20)
-                
-                Text(viewModel.article.description ?? "There is no description").font(Font.merriweatherRegular16)
-                    .padding(.horizontal, 20)
-                    .padding(.top, 20)
+
+            VStack {
+                Spacer()
+                bottomSheet
+                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.5)
+                    .background(Color.white)
+                    .cornerRadius(20, corners: [.topLeft, .topRight])
+                customTabBar
             }
-            
-            Spacer()
-            
-            customTabBar
+            .ignoresSafeArea(edges: .bottom)
         }
-        .ignoresSafeArea(edges: .bottom)
     }
 }
 
 // MARK: - View Builders
 
 extension DetailsView {
+
+    @ViewBuilder
+    var bottomSheet: some View {
+        VStack(alignment: .leading) {
+            Text(viewModel.article.title).font(Font.interSemiBold32)
+                .padding(.horizontal, 20)
+            HStack {
+                Text(viewModel.article.author ?? "Unknown Author").font(Font.interRegular12)
+                    .foregroundColor(.secondary)
+
+                Circle()
+                    .fill(Color.secondary)
+                    .frame(width: 2, height: 2)
+
+                Text(formatDate(viewModel.article.publishedAt)).font(Font.interRegular12)
+                    .foregroundColor(.secondary)
+                Spacer()
+            }
+            .padding(.horizontal, 20)
+
+            Text(viewModel.article.description ?? "There is no description").font(Font.merriweatherRegular16)
+                .padding(.horizontal, 20)
+                .padding(.top, 20)
+        }
+        .offset(y: -40)
+    }
+
     @ViewBuilder
     var customTabBar: some View {
         HStack {
             Button(action: {
                 viewModel.navigateToNewsScreen()
-                print("go to news")
             }) {
-                Image(systemName: "arrow.left")
+                Image("long-arrow-left")
                     .resizable()
                     .renderingMode(.template)
                     .foregroundColor(.black)
@@ -73,36 +82,46 @@ extension DetailsView {
             }
             .padding(.leading, 50)
             .contentShape(Rectangle())
-            
+
             Spacer()
-            
-            Button(action: {
-                print("Tapped Bookmark")
-            }) {
-                Image(systemName: "bookmark")
-                    .resizable()
-                    .renderingMode(.template)
-                    .foregroundColor(.black)
-                    .frame(width: 20, height: 20)
+
+            if viewModel.isPurchased {
+                HStack {
+                    if viewModel.isLoading {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: .black))
+                            .frame(width: 20, height: 20)
+                            .padding(.trailing, 30)
+                    } else {
+                        Button(action: {
+                            viewModel.uploadArticle()
+                        }) {
+                            Image(systemName: viewModel.isAddedToBookmarks ? "bookmark.fill" : "bookmark")
+                                .resizable()
+                                .renderingMode(.template)
+                                .foregroundColor(.black)
+                                .frame(width: 20, height: 20)
+                        }
+                        .contentShape(Rectangle())
+                        .padding(.trailing, 30)
+                    }
+
+                    Button(action: {
+                        viewModel.openOriginalArticle()
+                    }) {
+                        Image("share")
+                            .resizable()
+                            .renderingMode(.template)
+                            .foregroundColor(.black)
+                            .frame(width: 20, height: 20)
+                    }
+                    .padding(.trailing, 50)
+                    .contentShape(Rectangle())
+                }
             }
-            .contentShape(Rectangle())
-            
-            Spacer()
-            
-            Button(action: {
-                print("Tapped Share")
-            }) {
-                Image(systemName: "arrowshape.turn.up.right")
-                    .resizable()
-                    .renderingMode(.template)
-                    .foregroundColor(.black)
-                    .frame(width: 20, height: 20)
-            }
-            .padding(.trailing, 50)
-            .contentShape(Rectangle())
         }
         .frame(width: UIScreen.main.bounds.width, height: 80)
-        .background(Color(uiColor: .tabBar).opacity(0.7))
+        .background(Color(uiColor: .tabBarDetails).opacity(0.6))
         .cornerRadius(15, corners: [.topLeft, .topRight])
         .padding(.horizontal)
     }
