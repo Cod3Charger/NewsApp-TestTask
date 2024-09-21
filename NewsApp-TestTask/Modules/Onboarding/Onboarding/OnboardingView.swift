@@ -6,13 +6,10 @@
 //
 
 import SwiftUI
-import FirebaseAuth
 
 struct OnboardingView: View {
 
     @StateObject private var viewModel: OnboardingViewModel
-    @State var isShowingBottomSheet = true
-    @State private var userLoggedIn = (Auth.auth().currentUser != nil)
 
     init(viewModel: OnboardingViewModel) {
         self._viewModel = StateObject(wrappedValue: viewModel)
@@ -44,6 +41,20 @@ struct OnboardingView: View {
             }
             .ignoresSafeArea(edges: .bottom)
         }
+
+        .onAppear{
+            viewModel.setListener()
+        }
+
+        .alert(isPresented: $viewModel.showErrorAlert) {
+            Alert(title: Text("Error"), message: Text(viewModel.error), dismissButton: .default(Text("OK")))
+        }
+
+        .onChange(of: viewModel.error) {
+            if !$0.isEmpty {
+                viewModel.showErrorAlert = true
+            }
+        }
     }
 }
 
@@ -62,32 +73,27 @@ private extension OnboardingView {
                     .padding(.top, 8)
                     .foregroundStyle(.secondary)
             }
+
             Spacer()
-            
-            if userLoggedIn {
+
+            if viewModel.userLoggedIn {
+                Spacer()
+                Text("You already logged in").font(Font.poppinsSemiBold16)
                 Button {
                     viewModel.router.navigateToNextScreen()
                 } label: {
                     HStack {
-                        Image("google")
-                        Text("You already logged in").font(Font.poppinsSemiBold16)
+                        Text("Go!").font(Font.poppinsSemiBold16)
                             .foregroundColor(Color(uiColor: .googleTextGray))
                     }
-                    .padding()
+                    .frame(width: 100, height: 44)
                     .background(Color(uiColor: .googleButtonGray))
                     .cornerRadius(10)
                 }
                 .padding(.horizontal, 20)
-                .padding(.bottom, 40)
             } else {
                 Button(action: {
-                    Task {
-                        do {
-                            try await Authentication().googleOauth()
-                        } catch AuthenticationError.runtimeError(_) {
-
-                        }
-                    }
+                    viewModel.login()
                 }) {
                     HStack {
                         Image("google")
@@ -99,7 +105,18 @@ private extension OnboardingView {
                     .cornerRadius(10)
                 }
                 .padding(.horizontal, 20)
-                .padding(.bottom, 40)
+            }
+
+            if viewModel.userLoggedIn {
+                Button {
+                    viewModel.logout()
+                } label: {
+                    Text("Logout").font(Font.poppinsSemiBold16)
+                        .foregroundColor(Color.blue)
+                }
+                .padding(.bottom, 30)
+            } else {
+                Spacer()
             }
         }
     }
