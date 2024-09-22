@@ -43,6 +43,7 @@ struct AppCoordinatorView: View {
                     self.coordinator.change(flow: .paywall)
                 })
             )
+            .transition(.opacity)
         case .paywall:
             PaywallCoordinatorView(
                 moduleFactory: self.moduleFactory,
@@ -50,6 +51,7 @@ struct AppCoordinatorView: View {
                     self.coordinator.change(flow: .main)
                 })
             )
+            .transition(.opacity)
         case .main:
             MainCoordinatorView(
                 moduleFactory: self.moduleFactory,
@@ -57,6 +59,7 @@ struct AppCoordinatorView: View {
                     self.coordinator.change(flow: .details(article))
                 })
             )
+            .transition(.opacity)
         case .details(let article):
             DetailsCoordinatorView(
                 moduleFactory: self.moduleFactory,
@@ -66,6 +69,7 @@ struct AppCoordinatorView: View {
                         self.coordinator.change(flow: .main )
                     })
             )
+            .transition(.opacity)
         }
     }
 }

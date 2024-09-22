@@ -85,7 +85,6 @@ private extension PaywallView {
                         Task {
                             try await viewModel.storeKitManager.purchase(product)
                         }
-                        viewModel.navigateToNextScreen()
                     }) {
                         Text("Subscribe").font(Font.libreFranklinBold22)
                             .frame(width: 360, height: 60)

@@ -25,13 +25,24 @@ struct MainCoordinatorView: View {
             TabView(selection: $selectedTab) {
                 NewsCoordinatorView(
                     moduleFactory: self.moduleFactory,
-                    coordinator: NewsCoordinator(goToDetailsScreen: { article in
-                        self.coordinator.goToDetails(article)
+                    coordinator: NewsCoordinator(goToDetailsScreen: {
+                        article in
+                        self.coordinator.goToDetails(
+                            article
+                        )
                     })
                 )
                 .tag(0)
 
-                ProfileCoordinatorView(moduleFactory: self.moduleFactory, coordinator: ProfileCoordinator())
+                ProfileCoordinatorView(
+                    moduleFactory: self.moduleFactory,
+                    coordinator: ProfileCoordinator(goToDetailsScreen: {
+                        article in
+                        self.coordinator.goToDetails(
+                            article
+                        )
+                    })
+                )
                 .tag(1)
             }
 

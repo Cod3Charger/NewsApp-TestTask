@@ -65,7 +65,7 @@ extension DetailsView {
                 .padding(.horizontal, 20)
                 .padding(.top, 20)
         }
-        .offset(y: -40)
+        .offset(y: -20)
     }
 
     @ViewBuilder
@@ -87,37 +87,30 @@ extension DetailsView {
 
             if viewModel.isPurchased {
                 HStack {
-                    if viewModel.isLoading {
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle(tint: .black))
-                            .frame(width: 20, height: 20)
-                            .padding(.trailing, 30)
-                    } else {
-                        Button(action: {
-                            viewModel.uploadArticle()
-                        }) {
-                            Image(systemName: viewModel.isAddedToBookmarks ? "bookmark.fill" : "bookmark")
-                                .resizable()
-                                .renderingMode(.template)
-                                .foregroundColor(.black)
-                                .frame(width: 20, height: 20)
-                        }
-                        .contentShape(Rectangle())
-                        .padding(.trailing, 30)
-                    }
-
                     Button(action: {
-                        viewModel.openOriginalArticle()
+                        viewModel.uploadArticle()
                     }) {
-                        Image("share")
+                        Image(systemName: viewModel.isAddedToBookmarks ? "bookmark.fill" : "bookmark")
                             .resizable()
                             .renderingMode(.template)
                             .foregroundColor(.black)
                             .frame(width: 20, height: 20)
                     }
-                    .padding(.trailing, 50)
                     .contentShape(Rectangle())
+                    .padding(.trailing, 30)
                 }
+
+                Button(action: {
+                    viewModel.openOriginalArticle()
+                }) {
+                    Image("share")
+                        .resizable()
+                        .renderingMode(.template)
+                        .foregroundColor(.black)
+                        .frame(width: 20, height: 20)
+                }
+                .padding(.trailing, 50)
+                .contentShape(Rectangle())
             }
         }
         .frame(width: UIScreen.main.bounds.width, height: 80)

@@ -53,21 +53,44 @@ struct ProfileView: View {
         Divider()
             .padding(.horizontal, 30)
 
-        HStack {
-            Text(viewModel.isPurchased ? "Bookmarks" : "").font(Font.interBold24)
+        VStack {
+            if viewModel.isPurchased {
+                HStack {
+                    Text("Bookmarks").font(Font.interBold24)
+                    Spacer()
+                }
+                if viewModel.isLoading {
+                    ProgressView()
+                        .padding(.top, 200)
+                } else {
+                    ScrollView {
+                        VStack(spacing: 20) {
+                            if viewModel.bookmarks.isEmpty {
+                                Text("Bookmarks is empty").font(.merriweatherRegular16)
+                                    .padding(.top, 50)
+                            } else {
+                                ForEach(viewModel.bookmarks, id: \.self) { article in
+                                    NewsArticleView(
+                                        article: article,
+                                        navigateAction: { viewModel.navigateToDetails(article: article) }
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             Spacer()
         }
         .padding(.horizontal, 30)
         .padding(.vertical, 10)
-
-
         Spacer()
     }
 }
 
 #Preview {
     let moduleFactory = ModuleFactory()
-    let coordinator = ProfileCoordinator()
+    let coordinator = ProfileCoordinator(goToDetailsScreen: {_ in })
 
     return moduleFactory.makeProfileView(coordinator: coordinator)
 }

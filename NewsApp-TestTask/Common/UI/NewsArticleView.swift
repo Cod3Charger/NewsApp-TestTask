@@ -45,8 +45,11 @@ struct NewsArticleView: View {
                         .frame(width: 80, height: 60)
                         .cornerRadius(15)
                 } placeholder: {
-                    ProgressView()
+                    Image("defaultImage")
+                        .resizable()
+                        .scaledToFit()
                         .frame(width: 80, height: 60)
+                        .cornerRadius(15)
                 }
                 .padding(.trailing, 10)
             }

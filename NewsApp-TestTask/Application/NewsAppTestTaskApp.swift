@@ -34,5 +34,6 @@ struct NewsAppTestTaskApp: App {
                 GIDSignIn.sharedInstance.handle(url)
             }
         }
+        .environment(\.colorScheme, .light)
     }
 }

@@ -29,6 +29,7 @@ final class DetailsViewModel: ObservableObject {
 
         Task {
             await checkSubscribe()
+            await checkIfArticleExists()
         }
     }
 }
@@ -66,6 +67,17 @@ extension DetailsViewModel {
             case .failure(let error):
                 self.isAddedToBookmarks = false
                 print("Failed to upload article: \(error)")
+            }
+        }
+    }
+
+    func checkIfArticleExists() async {
+        firebaseStorageManager.articleExists(articleTitle: article.title) { result in
+            switch result {
+            case .success(let exists):
+                self.isAddedToBookmarks = exists
+            case .failure(let error):
+                print("Failed to check if article exists: \(error)")
             }
         }
     }

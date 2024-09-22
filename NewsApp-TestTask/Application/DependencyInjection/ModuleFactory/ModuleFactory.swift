@@ -96,9 +96,12 @@ extension ModuleFactory: ProfileViewFactory {
 
     func makeProfileView(coordinator:  ProfileCoordinator) -> ProfileView {
 
-        let router = ProfileViewModel.Router.init {}
+        let router = ProfileViewModel.Router.init { article in
+            coordinator.navigateToDetails(article: article)
+        }
 
         let viewModel = ProfileViewModel(
+            firebaseStorageManager: firebaseStoreManager,
             storeKitManager: storeKitManager,
             router: router
         )

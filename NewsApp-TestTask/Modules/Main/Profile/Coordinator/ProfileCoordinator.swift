@@ -15,12 +15,16 @@ final class ProfileCoordinator: Coordinator {
 
     @Published var navigationPath: [Screen] = []
 
-    var goToNextScreen: (() -> Void)?
+    var goToDetailsScreen: ((NewsArticle) -> Void)
 
-    init(goToNextScreen: (() -> Void)? = nil) {
-        self.goToNextScreen = goToNextScreen
+    init(goToDetailsScreen: @escaping ((NewsArticle) -> Void)) {
+        self.goToDetailsScreen = goToDetailsScreen
     }
 
+    func navigateToDetails(article: NewsArticle) {
+        goToDetailsScreen(article)
+    }
+    
     func popToRoot() {
         navigationPath.removeAll()
         navigationPath.append(.profile)

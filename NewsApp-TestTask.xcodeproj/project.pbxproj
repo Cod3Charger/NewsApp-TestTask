@@ -229,9 +229,6 @@
 		855703212C9AA99F0086590C /* NewsApp-TestTask */ = {
 			isa = PBXGroup;
 			children = (
-				85D6492C2C9DF7570068BD2F /* GoogleService-Info.plist */,
-				85D649302C9F2EA20068BD2F /* StoreKit-Configuration.storekit */,
-				85D649322C9F30D30068BD2F /* PropertyList-StoreKit.plist */,
 				855703302C9AAA3D0086590C /* Application */,
 				855703322C9AAA8D0086590C /* Core */,
 				855703342C9AAAAC0086590C /* Models */,
@@ -240,6 +237,7 @@
 				855703392C9AAAEA0086590C /* Extensions */,
 				8557033A2C9AAAF00086590C /* Resources */,
 				855703282C9AA9A10086590C /* Preview Content */,
+				85D649482C9F9CFE0068BD2F /* Configuration */,
 			);
 			path = "NewsApp-TestTask";
 			sourceTree = "<group>";
@@ -326,11 +324,11 @@
 		855703382C9AAAD10086590C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				85D6493A2C9F58830068BD2F /* Details */,
 				855703472C9C15E60086590C /* Launch */,
 				8557035D2C9C1F570086590C /* Onboarding */,
 				855703712C9C7A2D0086590C /* Paywall */,
 				8557039C2C9C987C0086590C /* Main */,
+				85D6493A2C9F58830068BD2F /* Details */,
 				855703422C9C14B80086590C /* AppCoordinator */,
 			);
 			path = Modules;
@@ -499,7 +497,6 @@
 		8557039E2C9C99080086590C /* News */ = {
 			isa = PBXGroup;
 			children = (
-				85D648D92C9D9B290068BD2F /* Details */,
 				85D648D82C9D9B180068BD2F /* News */,
 				855703AC2C9C9AEF0086590C /* Coordinator */,
 			);
@@ -563,13 +560,6 @@
 			path = News;
 			sourceTree = "<group>";
 		};
-		85D648D92C9D9B290068BD2F /* Details */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Details;
-			sourceTree = "<group>";
-		};
 		85D648F42C9DF2400068BD2F /* GoogleAuth */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,6 +612,16 @@
 				85D649462C9F83760068BD2F /* FirebaseStorageManager.swift */,
 			);
 			path = FirebaseStorage;
+			sourceTree = "<group>";
+		};
+		85D649482C9F9CFE0068BD2F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				85D649302C9F2EA20068BD2F /* StoreKit-Configuration.storekit */,
+				85D6492C2C9DF7570068BD2F /* GoogleService-Info.plist */,
+				85D649322C9F30D30068BD2F /* PropertyList-StoreKit.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -928,12 +928,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NewsApp-TestTask/Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -959,12 +959,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NewsApp-TestTask/Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

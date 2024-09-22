@@ -21,5 +21,7 @@
 		<string>LibreFranklin-VariableFont_wght.ttf</string>
 		<string>SchibstedGrotesk-VariableFont_wght.ttf</string>
 	</array>
+	<key>UIPrerenderedIcon</key>
+	<false/>
 </dict>
 </plist>
